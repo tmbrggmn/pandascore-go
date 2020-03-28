@@ -25,7 +25,7 @@ const (
 type Client struct {
 	baseUrl     *url.URL
 	httpClient  *http.Client
-	AccessToken AccessToken
+	AccessToken string
 }
 
 // Construct a new PandaScore client with the default URL.
@@ -37,7 +37,7 @@ func New() *Client {
 	c := &Client{
 		httpClient:  http.DefaultClient,
 		baseUrl:     &url.URL{Scheme: "https", Host: BaseURL},
-		AccessToken: AccessToken(os.Getenv(AccessTokenEnvironmentVariable)),
+		AccessToken: os.Getenv(AccessTokenEnvironmentVariable),
 	}
 
 	return c
@@ -89,15 +89,6 @@ func (c *Client) unmarshallResponse(response *http.Response, value interface{}) 
 		}
 		return err
 	}
-}
-
-// AccessToken represents a PandaScore access token.
-// TODO Remove AccessToken type and replace it with a string, it makes things more abstract for no reason
-type AccessToken string
-
-// Validates that the access token is valid.
-func (at AccessToken) IsValid() bool {
-	return len(at) > 1
 }
 
 // Represents an error coming directly from the PandaScore API (eg. no or invalid access token).

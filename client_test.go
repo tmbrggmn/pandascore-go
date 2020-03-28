@@ -9,12 +9,6 @@ import (
 	"gopkg.in/h2non/gock.v1"
 )
 
-func TestAccessToken_IsValid(t *testing.T) {
-	assert.True(t, AccessToken("sa").IsValid())
-	assert.True(t, AccessToken("sample_access_token").IsValid())
-	assert.False(t, AccessToken("").IsValid())
-}
-
 func TestNew(t *testing.T) {
 	_ = os.Setenv(AccessTokenEnvironmentVariable, "env_access_token")
 	result := New()
