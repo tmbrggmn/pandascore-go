@@ -43,12 +43,12 @@ type Request struct {
 // Adds a filter parameter to the request, where the given field must match the given value.
 //
 // More information: https://developers.pandascore.co/doc/index.htm#section/Introduction/Filtering
-func (r *Request) Filter(field string, value string) *Request {
+func (r *Request) Filter(field string, value ...string) *Request {
 	if r.filter == nil {
 		r.filter = make(map[string]string)
 	}
 	if len(field) > 0 && len(value) > 0 {
-		r.filter[field] = value
+		r.filter[field] = strings.Join(value, ",")
 	}
 	return r
 }
@@ -79,9 +79,7 @@ func (r *Request) Sort(field string, order Order) *Request {
 	return r
 }
 
-// Execute a new request against the PandaScore API and marshal the response body in the value pointed to by value
-// parameter. You shouldn't really need to use this method since most of the endpoints (eg. series, matches, ...) are
-// abstracted by other methods, but its here if you need it.
+// Execute the request against the PandaScore API and marshal the response body in the value pointed to by value.
 func (r *Request) Execute() error {
 	if !r.game.IsValid() {
 		return fmt.Errorf("unknown game '%s'", r.game)

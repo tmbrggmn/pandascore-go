@@ -76,6 +76,29 @@ func TestRequest_Filter_Execute(t *testing.T) {
 	assert.Len(t, *leagues, 1)
 }
 
+func TestRequest_Filter_Execute_withMultipleValues(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("filter[name]", "ESL,IEM").
+		MatchParam("filter[slug]", "cs-go-esl").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	client := New()
+	err := client.
+		Request(CSGO, "leagues", leagues).
+		Filter("name", "ESL", "IEM").
+		Filter("slug", "cs-go-esl").
+		Execute()
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
 func TestRequest_Search_Execute(t *testing.T) {
 	defer gock.Off()
 	defer assert.True(t, gock.IsDone())
