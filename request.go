@@ -6,28 +6,75 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"strings"
 )
+
+const (
+	// Sort in ascending order
+	Ascending Order = 0
+	// Sort in descending order
+	Descending Order = 1
+)
+
+// Order used for specifying sorting parameters.
+type Order byte
+
+func (o Order) forField(field string) string {
+	if o == Descending {
+		return "-" + field
+	} else {
+		return field
+	}
+}
 
 // PandaScore API request with it's attributes
 //
-// TODO add support for search, range and sorting
+// TODO add support for range
 type Request struct {
-	client  *Client
-	game    Game
-	path    string
-	value   interface{}
-	filters map[string]string
+	client *Client
+	game   Game
+	path   string
+	value  interface{}
+	filter map[string]string
+	search map[string]string
+	sort   []string
 }
 
-// Registers a new filter to be applied to the request upon execution, where the given field must match the given value.
+// Adds a filter parameter to the request, where the given field must match the given value.
 //
-// For example: Filter("name", "ESL") when request leagues would filter all leagues where the league name is "ESL"
+// More information: https://developers.pandascore.co/doc/index.htm#section/Introduction/Filtering
 func (r *Request) Filter(field string, value string) *Request {
-	if r.filters == nil {
-		r.filters = make(map[string]string)
+	if r.filter == nil {
+		r.filter = make(map[string]string)
 	}
 	if len(field) > 0 && len(value) > 0 {
-		r.filters[field] = value
+		r.filter[field] = value
+	}
+	return r
+}
+
+// Adds a search parameter to the request, where the given field must contain the given value.
+//
+// More information: https://developers.pandascore.co/doc/index.htm#section/Introduction/Search
+func (r *Request) Search(field string, value string) *Request {
+	if r.search == nil {
+		r.search = make(map[string]string)
+	}
+	if len(field) > 0 && len(value) > 0 {
+		r.search[field] = value
+	}
+	return r
+}
+
+// Adds a sort parameter to the request.
+//
+// More information: https://developers.pandascore.co/doc/index.htm#section/Introduction/Sorting
+func (r *Request) Sort(field string, order Order) *Request {
+	if r.sort == nil {
+		r.sort = []string{}
+	}
+	if len(field) > 0 {
+		r.sort = append(r.sort, order.forField(field))
 	}
 	return r
 }
@@ -60,19 +107,27 @@ func (r *Request) Execute() error {
 }
 
 func buildRequest(request *Request) (*http.Request, error) {
-	requestURL := request.client.baseUrl.ResolveReference(&url.URL{Path: string(request.game) + "/" + request.path})
-	addFiltersToRequestURL(request.filters, requestURL)
+	requestURL := request.client.baseURL.ResolveReference(&url.URL{Path: string(request.game) + "/" + request.path})
+	addQueryParameterFromMap(request.filter, "filter", requestURL)
+	addQueryParameterFromMap(request.search, "search", requestURL)
+	addSortQueryParameter(request, requestURL)
 	return http.NewRequest("GET", requestURL.String(), nil)
 }
 
-func addFiltersToRequestURL(filters map[string]string, requestURL *url.URL) {
-	if filters != nil && len(filters) > 0 {
+func addQueryParameterFromMap(keysAndValues map[string]string, parameter string, requestURL *url.URL) {
+	if keysAndValues != nil && len(keysAndValues) > 0 {
 		query := requestURL.Query()
-		for key, value := range filters {
-			query.Set(key, value)
+		for key, value := range keysAndValues {
+			query.Set(parameter+"["+key+"]", value)
 		}
 		requestURL.RawQuery = query.Encode()
 	}
+}
+
+func addSortQueryParameter(request *Request, requestURL *url.URL) {
+	query := requestURL.Query()
+	query.Add("sort", strings.Join(request.sort, ","))
+	requestURL.RawQuery = query.Encode()
 }
 
 func unmarshallResponse(response *http.Response, value interface{}) error {

@@ -50,8 +50,8 @@ func TestRequest_Filter(t *testing.T) {
 	request := new(Request).Filter("field", "value")
 
 	assert.NotNil(t, request)
-	assert.Len(t, request.filters, 1)
-	assert.Equal(t, map[string]string{"field": "value"}, request.filters)
+	assert.Len(t, request.filter, 1)
+	assert.Equal(t, map[string]string{"field": "value"}, request.filter)
 }
 
 func TestRequest_Filter_Execute(t *testing.T) {
@@ -59,7 +59,8 @@ func TestRequest_Filter_Execute(t *testing.T) {
 	defer assert.True(t, gock.IsDone())
 
 	gock.New("https://api.pandascore.co/csgo/leagues").
-		MatchParam("name", "ESL").
+		MatchParam("filter[name]", "ESL").
+		MatchParam("filter[slug]", "cs-go-esl").
 		Reply(http.StatusOK).
 		File("testdata/csgo-leagues-esl.json")
 
@@ -67,6 +68,50 @@ func TestRequest_Filter_Execute(t *testing.T) {
 	err := New().
 		Request(CSGO, "leagues", leagues).
 		Filter("name", "ESL").
+		Filter("slug", "cs-go-esl").
+		Execute()
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Search_Execute(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("search[name]", "ESL").
+		MatchParam("search[slug]", "cs-go-esl").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	err := New().
+		Request(CSGO, "leagues", leagues).
+		Search("name", "ESL").
+		Search("slug", "cs-go-esl").
+		Execute()
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Sort_Execute(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("sort", "name,-modified_at").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	err := New().
+		Request(CSGO, "leagues", leagues).
+		Sort("name", Ascending).
+		Sort("modified_at", Descending).
 		Execute()
 
 	assert.Nil(t, err)

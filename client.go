@@ -19,7 +19,7 @@ const (
 
 // PandaScore client which is the primary entity.
 type Client struct {
-	baseUrl     *url.URL
+	baseURL     *url.URL
 	httpClient  *http.Client
 	accessToken string
 	filter      string
@@ -32,7 +32,7 @@ type Client struct {
 func New() *Client {
 	c := &Client{
 		httpClient:  http.DefaultClient,
-		baseUrl:     &url.URL{Scheme: "https", Host: BaseURL},
+		baseURL:     &url.URL{Scheme: "https", Host: BaseURL},
 		accessToken: os.Getenv(AccessTokenEnvironmentVariable),
 	}
 
