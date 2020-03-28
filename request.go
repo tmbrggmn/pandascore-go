@@ -9,11 +9,27 @@ import (
 )
 
 // PandaScore API request with it's attributes
+//
+// TODO add support for search, range and sorting
 type Request struct {
-	client *Client
-	game   Game
-	path   string
-	value  interface{}
+	client  *Client
+	game    Game
+	path    string
+	value   interface{}
+	filters map[string]string
+}
+
+// Registers a new filter to be applied to the request upon execution, where the given field must match the given value.
+//
+// For example: Filter("name", "ESL") when request leagues would filter all leagues where the league name is "ESL"
+func (r *Request) Filter(field string, value string) *Request {
+	if r.filters == nil {
+		r.filters = make(map[string]string)
+	}
+	if len(field) > 0 && len(value) > 0 {
+		r.filters[field] = value
+	}
+	return r
 }
 
 // Execute a new request against the PandaScore API and marshal the response body in the value pointed to by value
@@ -24,7 +40,7 @@ func (r *Request) Execute() error {
 		return fmt.Errorf("unknown game '%s'", r.game)
 	}
 
-	request, err := r.buildRequest()
+	request, err := buildRequest(r)
 	if err != nil {
 		log.Printf("unable to build new PandaScore request: %s", err)
 		return err
@@ -36,19 +52,30 @@ func (r *Request) Execute() error {
 		return err
 	}
 
-	err = r.unmarshallResponse(response, r.value)
+	err = unmarshallResponse(response, r.value)
 	if err != nil {
 		log.Printf("failed to unmarshal PandaScore response: %s", err)
 	}
 	return err
 }
 
-func (r *Request) buildRequest() (*http.Request, error) {
-	requestURL := r.client.baseUrl.ResolveReference(&url.URL{Path: string(r.game) + "/" + r.path}).String()
-	return http.NewRequest("GET", requestURL, nil)
+func buildRequest(request *Request) (*http.Request, error) {
+	requestURL := request.client.baseUrl.ResolveReference(&url.URL{Path: string(request.game) + "/" + request.path})
+	addFiltersToRequestURL(request.filters, requestURL)
+	return http.NewRequest("GET", requestURL.String(), nil)
 }
 
-func (r *Request) unmarshallResponse(response *http.Response, value interface{}) error {
+func addFiltersToRequestURL(filters map[string]string, requestURL *url.URL) {
+	if filters != nil && len(filters) > 0 {
+		query := requestURL.Query()
+		for key, value := range filters {
+			query.Set(key, value)
+		}
+		requestURL.RawQuery = query.Encode()
+	}
+}
+
+func unmarshallResponse(response *http.Response, value interface{}) error {
 	defer response.Body.Close()
 
 	// If the response is successful; unmarshal the body. If not; unmarshal the error message in the body.

@@ -1,6 +1,5 @@
 // Consume the PandaScore API in Go.
 //
-// TODO add support for filters, search, range and sorting
 // TODO look at errors and how they're returned; we should probably be using Wrap() and stuff but I don't fully understand how that works
 package pandascore
 
