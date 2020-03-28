@@ -5,7 +5,7 @@ import "time"
 // Returns all known leagues for the given game.
 func (c *Client) GetLeagues(game Game) ([]League, error) {
 	leagues := new([]League)
-	err := c.Request(game, "leagues", leagues)
+	err := c.Request(game, "leagues", leagues).Execute()
 	return *leagues, err
 }
 
