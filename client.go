@@ -1,4 +1,6 @@
 // Consume the PandaScore API in Go.
+//
+// TODO Add support for filters, search, range and sorting
 package pandascore
 
 import (
@@ -90,6 +92,7 @@ func (c *Client) unmarshallResponse(response *http.Response, value interface{}) 
 }
 
 // AccessToken represents a PandaScore access token.
+// TODO Remove AccessToken type and replace it with a string, it makes things more abstract for no reason
 type AccessToken string
 
 // Validates that the access token is valid.

@@ -48,7 +48,7 @@ func TestRequest(t *testing.T) {
 
 	gock.New("https://api.pandascore.co/csgo/series/running").
 		Reply(http.StatusOK).
-		File("testdata/runningCSGOSeries.json")
+		File("testdata/csgo-series-running.json")
 
 	client := New()
 	series := new([]Series)
@@ -57,4 +57,28 @@ func TestRequest(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, series)
 	assert.Len(t, *series, 2)
+}
+
+func TestRequest_invalidGame(t *testing.T) {
+	client := New()
+	err := client.Request(Game("doesn't exist"), "series/running", nil)
+
+	assert.NotNil(t, err)
+	assert.Contains(t, err.Error(), "doesn't exist")
+}
+
+func TestRequest_missingAccessToken(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		Reply(http.StatusForbidden).
+		File("testdata/error-missing-access-token.json")
+
+	client := New()
+	err := client.Request(CSGO, "series/running", nil)
+
+	assert.NotNil(t, err)
+	assert.IsType(t, &PandaScoreError{}, err)
+	assert.EqualError(t, err, "PandaScore error: Token is missing")
 }

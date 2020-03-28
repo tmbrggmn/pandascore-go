@@ -1,0 +1,1865 @@
+[
+  {
+    "id": 4351,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4351/600px-Hipfiredcup1.png",
+    "modified_at": "2020-03-26T10:05:06Z",
+    "name": "HIPFIRED CUP",
+    "series": [
+      {
+        "begin_at": "2020-03-26T23:00:00Z",
+        "description": null,
+        "end_at": "2020-04-04T22:00:00Z",
+        "full_name": "2020",
+        "id": 2571,
+        "league_id": 4351,
+        "modified_at": "2020-03-26T10:05:40Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-hipfired-cup-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-hipfired-cup",
+    "url": "https://hipfired.media/hipfired-cup/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4350,
+    "image_url": null,
+    "modified_at": "2020-03-26T06:15:33Z",
+    "name": "MEGOGO Open",
+    "series": [
+      {
+        "begin_at": "2020-03-28T13:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "2020",
+        "id": 2568,
+        "league_id": 4350,
+        "modified_at": "2020-03-26T06:15:48Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-megogo-open-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-megogo-open",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4349,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4349/600px-Baltic_Masters_Season_3_logo.png",
+    "modified_at": "2020-03-26T06:06:46Z",
+    "name": "Baltic Masters",
+    "series": [
+      {
+        "begin_at": "2020-03-29T11:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 4 2020",
+        "id": 2567,
+        "league_id": 4349,
+        "modified_at": "2020-03-26T06:07:21Z",
+        "name": null,
+        "season": "4",
+        "slug": "cs-go-baltic-masters-4-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-baltic-masters",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4348,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4348/600px-PEEK_Tournament.png",
+    "modified_at": "2020-03-25T10:45:07Z",
+    "name": "PEEK Tournament",
+    "series": [
+      {
+        "begin_at": "2020-03-24T23:00:00Z",
+        "description": null,
+        "end_at": "2020-03-25T23:00:00Z",
+        "full_name": "2020",
+        "id": 2561,
+        "league_id": 4348,
+        "modified_at": "2020-03-25T10:46:02Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-peek-tournament-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-peek-tournament",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4345,
+    "image_url": null,
+    "modified_at": "2020-03-23T20:48:11Z",
+    "name": "Huya DarkHorse League",
+    "series": [
+      {
+        "begin_at": "2020-03-24T23:00:00Z",
+        "description": null,
+        "end_at": "2020-04-05T22:00:00Z",
+        "full_name": "Season season 1 2020",
+        "id": 2558,
+        "league_id": 4345,
+        "modified_at": "2020-03-23T20:40:45Z",
+        "name": "Season",
+        "season": "1",
+        "slug": "cs-go-huya-darkhorse-league-season-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-huya-darkhorse-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4344,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4344/600px-Elisa_Viihde_Spring_Challenge.png",
+    "modified_at": "2020-03-22T05:30:13Z",
+    "name": "Elisa Viihde Challenge",
+    "series": [
+      {
+        "begin_at": "2020-03-20T16:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Finnish qualifier 2020",
+        "id": 2557,
+        "league_id": 4344,
+        "modified_at": "2020-03-22T05:31:11Z",
+        "name": "Finnish qualifier",
+        "season": null,
+        "slug": "cs-go-elisa-viihde-spring-challenge-finnish-qualifier-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-elisa-viihde-spring-challenge",
+    "url": "https://elisaviihde.fi/sport/sarjat/1534/elisa-viihde-cs:go-spring-challenge",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4340,
+    "image_url": null,
+    "modified_at": "2020-03-18T21:14:02Z",
+    "name": "Liga DELL",
+    "series": [],
+    "slug": "cs-go-liga-dell",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4247,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4247/900px-Teslogo.png",
+    "modified_at": "2020-03-15T14:21:54Z",
+    "name": "Telia Esports",
+    "series": [
+      {
+        "begin_at": "2019-10-04T20:00:00Z",
+        "description": null,
+        "end_at": "2019-11-15T21:45:00Z",
+        "full_name": "Season 2 2019",
+        "id": 1873,
+        "league_id": 4247,
+        "modified_at": "2019-11-16T17:01:38Z",
+        "name": null,
+        "season": "2",
+        "slug": "cs-go-telia-esports-series-2-2019",
+        "winner_id": 125774,
+        "winner_type": "Team",
+        "year": 2019
+      },
+      {
+        "begin_at": "2020-03-19T16:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 3 2020",
+        "id": 2532,
+        "league_id": 4247,
+        "modified_at": "2020-03-12T08:49:26Z",
+        "name": null,
+        "season": "3",
+        "slug": "cs-go-telia-esports-series-3-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-telia-esports-series",
+    "url": "https://www.teliaesportsseries.com",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4312,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4312/FLASHPOINT.png",
+    "modified_at": "2020-03-15T07:02:38Z",
+    "name": "Flashpoint",
+    "series": [
+      {
+        "begin_at": "2020-02-07T17:00:00Z",
+        "description": null,
+        "end_at": "2020-02-07T22:19:00Z",
+        "full_name": "Europe Open Qualifier 1 2020",
+        "id": 2453,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "Europe Open Qualifier 1",
+        "season": null,
+        "slug": "cs-go-flashpoint-europe-open-qualifier-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-07T21:00:00Z",
+        "description": null,
+        "end_at": "2020-02-08T03:03:00Z",
+        "full_name": "South America Open Qualifier 1 2020",
+        "id": 2454,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "South America Open Qualifier 1",
+        "season": null,
+        "slug": "cs-go-flashpoint-south-america-open-qualifier-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-07T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-08T04:13:00Z",
+        "full_name": "North America Open Qualifier 1 2020",
+        "id": 2455,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "North America Open Qualifier 1",
+        "season": null,
+        "slug": "cs-go-flashpoint-north-america-open-qualifier-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-10T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-11T23:21:00Z",
+        "full_name": "Europe Open Qualifier 4 2020",
+        "id": 2475,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "Europe Open Qualifier 4",
+        "season": null,
+        "slug": "cs-go-flashpoint-europe-open-qualifier-4-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-10T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-12T22:00:00Z",
+        "full_name": "South America Open Qualifier 4 2020",
+        "id": 2479,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "South America Open Qualifier 4",
+        "season": null,
+        "slug": "cs-go-flashpoint-south-america-open-qualifier-4-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-11T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-12T06:00:00Z",
+        "full_name": "North America Open Qualifer 4 2020",
+        "id": 2478,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "North America Open Qualifer 4",
+        "season": null,
+        "slug": "cs-go-flashpoint-north-america-open-qualifer-4-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-13T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-17T04:18:00Z",
+        "full_name": "South America Closed Qualifier 2020",
+        "id": 2484,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "South America Closed Qualifier",
+        "season": null,
+        "slug": "cs-go-flashpoint-south-america-closed-qualifier-2020",
+        "winner_id": 125863,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-14T17:00:00Z",
+        "description": null,
+        "end_at": "2020-02-17T20:09:00Z",
+        "full_name": "Europe Closed Qualifer 2020",
+        "id": 2483,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "Europe Closed Qualifer",
+        "season": null,
+        "slug": "cs-go-flashpoint-europe-closed-qualifer-2020",
+        "winner_id": 126605,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-02-14T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-17T06:51:00Z",
+        "full_name": "North America Closed Qualifier 2020",
+        "id": 2485,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "North America Closed Qualifier",
+        "season": null,
+        "slug": "cs-go-flashpoint-north-america-closed-qualifier-2020",
+        "winner_id": 125798,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-03-03T17:00:00Z",
+        "description": null,
+        "end_at": "2020-03-05T23:21:00Z",
+        "full_name": "Global qualifier 2020",
+        "id": 2511,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "Global qualifier",
+        "season": null,
+        "slug": "cs-go-flashpoint-global-qualifier-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-03-13T17:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 1 2020",
+        "id": 2531,
+        "league_id": 4312,
+        "modified_at": "2020-03-15T01:18:06Z",
+        "name": "",
+        "season": "1",
+        "slug": "cs-go-flashpoint-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-flashpoint",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4332,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4332/600px-LPG_Movistar.png",
+    "modified_at": "2020-03-14T07:58:37Z",
+    "name": "Movistar Liga Pro Gaming",
+    "series": [
+      {
+        "begin_at": "2020-03-14T15:00:00Z",
+        "description": null,
+        "end_at": "2020-03-15T05:20:00Z",
+        "full_name": "Season 3 2020",
+        "id": 2534,
+        "league_id": 4332,
+        "modified_at": "2020-03-16T05:20:15Z",
+        "name": null,
+        "season": "3",
+        "slug": "cs-go-liga-pro-gaming-3-2020",
+        "winner_id": 126826,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-liga-pro-gaming",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4331,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4331/5247.png",
+    "modified_at": "2020-03-13T04:36:29Z",
+    "name": "SECTOR: MOSTBET",
+    "series": [
+      {
+        "begin_at": "2020-03-15T17:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 2 2020",
+        "id": 2533,
+        "league_id": 4331,
+        "modified_at": "2020-03-13T04:37:31Z",
+        "name": "",
+        "season": "2",
+        "slug": "cs-go-sector-mostbet-2-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-sector-mostbet",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4329,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4329/600px-EFire_Master_League.png",
+    "modified_at": "2020-03-06T07:51:45Z",
+    "name": "eFire Master League",
+    "series": [
+      {
+        "begin_at": "2020-03-17T00:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "North America season 1 2020",
+        "id": 2529,
+        "league_id": 4329,
+        "modified_at": "2020-03-06T07:53:35Z",
+        "name": "North America",
+        "season": "1",
+        "slug": "cs-go-efire-master-league-north-america-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-efire-master-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4328,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4328/320px-UTAGE_Japan_League.png",
+    "modified_at": "2020-03-02T09:38:55Z",
+    "name": "UTAGE Japan League",
+    "series": [
+      {
+        "begin_at": "2020-03-06T23:00:00Z",
+        "description": null,
+        "end_at": "2020-03-07T12:48:00Z",
+        "full_name": "Season 4 2020",
+        "id": 2523,
+        "league_id": 4328,
+        "modified_at": "2020-03-08T07:36:37Z",
+        "name": "Season 4",
+        "season": null,
+        "slug": "cs-go-utage-japan-league-season-4-2020",
+        "winner_id": 127044,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-utage-japan-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4327,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4327/600px-ESL_ANZ_Champs.png",
+    "modified_at": "2020-02-29T01:13:12Z",
+    "name": "ESL ANZ Champs",
+    "series": [],
+    "slug": "cs-go-esl-anz-champs",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4326,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4326/600px-OMG.BET_Cup.png",
+    "modified_at": "2020-02-28T21:50:21Z",
+    "name": "OMG.BET",
+    "series": [
+      {
+        "begin_at": "2020-02-29T14:00:00Z",
+        "description": null,
+        "end_at": "2020-03-06T20:58:00Z",
+        "full_name": "Cup 2020",
+        "id": 2519,
+        "league_id": 4326,
+        "modified_at": "2020-03-09T07:52:46Z",
+        "name": "Cup",
+        "season": null,
+        "slug": "cs-go-omg-bet-cup-2020",
+        "winner_id": 126699,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-omg-bet",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4206,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4206/zdP08yVd_400x400.jpg",
+    "modified_at": "2020-02-28T18:33:49Z",
+    "name": "LanTrek",
+    "series": [
+      {
+        "begin_at": "2019-03-01T11:00:00Z",
+        "description": null,
+        "end_at": "2019-03-02T11:00:00Z",
+        "full_name": "2019",
+        "id": 1728,
+        "league_id": 4206,
+        "modified_at": "2019-12-09T11:15:39Z",
+        "name": "",
+        "season": null,
+        "slug": "cs-go-lantrek-2019",
+        "winner_id": 125770,
+        "winner_type": "Team",
+        "year": 2019
+      },
+      {
+        "begin_at": "2020-02-27T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-29T20:23:00Z",
+        "full_name": "2020",
+        "id": 2510,
+        "league_id": 4206,
+        "modified_at": "2020-03-02T07:19:25Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-lantrek-2020",
+        "winner_id": 125774,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-lantrek",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4324,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4324/ilg-logo.png",
+    "modified_at": "2020-02-28T18:32:07Z",
+    "name": "ILG Cup",
+    "series": [
+      {
+        "begin_at": "2020-02-29T23:00:00Z",
+        "description": null,
+        "end_at": "2020-03-01T17:47:00Z",
+        "full_name": "Season 3 2020",
+        "id": 2513,
+        "league_id": 4324,
+        "modified_at": "2020-03-02T07:22:19Z",
+        "name": null,
+        "season": "3",
+        "slug": "cs-go-ilg-cup-3-2020",
+        "winner_id": 127086,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-ilg-cup",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4325,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4325/600px-LPL_Pro_League.png",
+    "modified_at": "2020-02-28T18:30:26Z",
+    "name": "LPL Pro League",
+    "series": [
+      {
+        "begin_at": "2020-02-26T23:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 4 2020",
+        "id": 2514,
+        "league_id": 4325,
+        "modified_at": "2020-02-26T14:28:42Z",
+        "name": "Season 4",
+        "season": null,
+        "slug": "cs-go-lpl-pro-league-season-4-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-lpl-pro-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4323,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4323/600px-Aorus_League.png",
+    "modified_at": "2020-02-25T23:56:00Z",
+    "name": "Aorus",
+    "series": [
+      {
+        "begin_at": "2020-02-26T22:00:00Z",
+        "description": null,
+        "end_at": "2020-03-01T23:03:00Z",
+        "full_name": "Southern Cone season 1 2020",
+        "id": 2512,
+        "league_id": 4323,
+        "modified_at": "2020-03-02T07:18:40Z",
+        "name": "Southern Cone",
+        "season": "1",
+        "slug": "cs-go-aorus-southern-cone-1-2020",
+        "winner_id": 126709,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-03-27T23:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 1 2020",
+        "id": 2544,
+        "league_id": 4323,
+        "modified_at": "2020-03-18T13:48:32Z",
+        "name": "Season 1",
+        "season": null,
+        "slug": "cs-go-aorus-season-1-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-aorus",
+    "url": "http://sur.aorusleague.com/csgo/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4321,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4321/BLAST_Premier_icon.png",
+    "modified_at": "2020-02-21T08:47:25Z",
+    "name": "BLAST Premier",
+    "series": [
+      {
+        "begin_at": "2020-01-20T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-16T22:43:00Z",
+        "full_name": "Regular Season Spring 2020",
+        "id": 2355,
+        "league_id": 4321,
+        "modified_at": "2020-02-21T08:48:32Z",
+        "name": "Regular Season",
+        "season": "Spring",
+        "slug": "cs-go-blast-premier-regular-season-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-blast-premier",
+    "url": "https://blastpremier.com/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4320,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4320/600px-POWER_Ligaen.jpeg",
+    "modified_at": "2020-02-19T15:50:05Z",
+    "name": "POWER Ligaen",
+    "series": [
+      {
+        "begin_at": "2020-02-18T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-20T22:07:00Z",
+        "full_name": "Season 13 2020",
+        "id": 2497,
+        "league_id": 4320,
+        "modified_at": "2020-02-23T14:41:03Z",
+        "name": "Season 13",
+        "season": null,
+        "slug": "cs-go-power-ligaen-season-13-2020",
+        "winner_id": 126634,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-power-ligaen",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4319,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4319/5223.png",
+    "modified_at": "2020-02-18T12:19:03Z",
+    "name": "OGA",
+    "series": [
+      {
+        "begin_at": "2020-02-16T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-23T23:32:00Z",
+        "full_name": "Counter PIT season 7 2020",
+        "id": 2496,
+        "league_id": 4319,
+        "modified_at": "2020-02-24T13:38:24Z",
+        "name": "Counter PIT",
+        "season": "7",
+        "slug": "cs-go-oga-counter-pit-7-2020",
+        "winner_id": 3285,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-oga",
+    "url": "",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4315,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4315/600px-Baltic_eSports_League.png",
+    "modified_at": "2020-02-18T12:17:21Z",
+    "name": "BESL",
+    "series": [
+      {
+        "begin_at": "2020-02-14T23:00:00Z",
+        "description": null,
+        "end_at": "2020-02-15T22:00:00Z",
+        "full_name": "Pro Season season 5 2020",
+        "id": 2476,
+        "league_id": 4315,
+        "modified_at": "2020-02-19T12:31:00Z",
+        "name": "Pro Season",
+        "season": "5",
+        "slug": "cs-go-besl-pro-season-5-2020",
+        "winner_id": 126777,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-besl",
+    "url": "https://besl.pro/csgo",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4317,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4317/600px-Liga_Dell_Gaming.png",
+    "modified_at": "2020-02-14T12:57:37Z",
+    "name": "Gamers Club Liga Pro",
+    "series": [
+      {
+        "begin_at": "2020-02-18T21:00:00Z",
+        "description": null,
+        "end_at": "2020-02-22T03:06:00Z",
+        "full_name": "February 2020",
+        "id": 2487,
+        "league_id": 4317,
+        "modified_at": "2020-02-23T14:39:51Z",
+        "name": "February",
+        "season": null,
+        "slug": "cs-go-gamers-club-liga-pro-february-2020",
+        "winner_id": 127032,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-03-26T23:00:00Z",
+        "description": null,
+        "end_at": "2020-03-28T23:00:00Z",
+        "full_name": "March 2020",
+        "id": 2550,
+        "league_id": 4317,
+        "modified_at": "2020-03-23T01:45:03Z",
+        "name": "",
+        "season": "March",
+        "slug": "cs-go-gamers-club-liga-pro-march-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-gamers-club-liga-pro",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4316,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4316/0.png",
+    "modified_at": "2020-02-13T13:19:55Z",
+    "name": "Assembly",
+    "series": [
+      {
+        "begin_at": "2020-02-20T12:00:00Z",
+        "description": null,
+        "end_at": "2020-02-22T19:30:00Z",
+        "full_name": "Winter 2020",
+        "id": 2486,
+        "league_id": 4316,
+        "modified_at": "2020-02-23T14:50:06Z",
+        "name": null,
+        "season": "Winter",
+        "slug": "cs-go-assembly-winter-2020",
+        "winner_id": 125774,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-assembly",
+    "url": "https://www.assembly.org/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4314,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4314/Huya_CSGO_Pro_League.png",
+    "modified_at": "2020-02-10T14:56:15Z",
+    "name": "Huya Pro League",
+    "series": [
+      {
+        "begin_at": "2020-02-10T23:00:00Z",
+        "description": null,
+        "end_at": "2020-03-05T10:59:00Z",
+        "full_name": "Season 1 2020",
+        "id": 2472,
+        "league_id": 4314,
+        "modified_at": "2020-03-09T08:15:25Z",
+        "name": "Season 1",
+        "season": null,
+        "slug": "cs-go-huya-cs-go-pro-league-season-1-2020",
+        "winner_id": 126373,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-huya-cs-go-pro-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4306,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4306/Millenium_2017.png",
+    "modified_at": "2020-02-07T16:34:11Z",
+    "name": "Millenium Clutch",
+    "series": [
+      {
+        "begin_at": "2020-01-25T16:00:00Z",
+        "description": null,
+        "end_at": "2020-01-25T18:08:00Z",
+        "full_name": "2020",
+        "id": 2419,
+        "league_id": 4306,
+        "modified_at": "2020-01-26T09:21:18Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-millenium-clutch-2020",
+        "winner_id": 126453,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-millenium-clutch",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4265,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4265/swisscom-hero-league-seas1572710114133-logo-1.png",
+    "modified_at": "2020-02-07T16:31:08Z",
+    "name": "Swisscom Hero",
+    "series": [
+      {
+        "begin_at": "2019-11-23T13:00:00Z",
+        "description": null,
+        "end_at": "2019-11-23T15:22:00Z",
+        "full_name": "Finals season 2 2019",
+        "id": 2215,
+        "league_id": 4265,
+        "modified_at": "2019-11-25T08:02:18Z",
+        "name": "Finals",
+        "season": "2",
+        "slug": "cs-go-swisscom-hero-finals-2-2019",
+        "winner_id": 126501,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-swisscom-hero",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4241,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4241/CLUTCH_BR_League.png",
+    "modified_at": "2020-02-03T21:33:07Z",
+    "name": "CLUTCH BR",
+    "series": [
+      {
+        "begin_at": "2019-09-09T22:00:00Z",
+        "description": null,
+        "end_at": "2019-12-22T23:51:00Z",
+        "full_name": "Season 1 2019",
+        "id": 1852,
+        "league_id": 4241,
+        "modified_at": "2019-12-23T06:11:35Z",
+        "name": null,
+        "season": "1",
+        "slug": "cs-go-clutch-brasileirao-1-2019",
+        "winner_id": 125751,
+        "winner_type": "Team",
+        "year": 2019
+      },
+      {
+        "begin_at": "2020-02-10T21:15:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "Season 2 2020",
+        "id": 2423,
+        "league_id": 4241,
+        "modified_at": "2020-02-03T19:05:16Z",
+        "name": null,
+        "season": "2",
+        "slug": "cs-go-brasileirao-2-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-clutch-brasileirao",
+    "url": "https://clutchcircuit.com.br/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4309,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4309/Viet_Nam_Pro_League_s2_csgo.png",
+    "modified_at": "2020-02-03T19:19:31Z",
+    "name": "Vietnam Pro",
+    "series": [
+      {
+        "begin_at": "2020-02-08T04:00:00Z",
+        "description": null,
+        "end_at": "2020-02-09T12:56:00Z",
+        "full_name": "Season 3 2020",
+        "id": 2441,
+        "league_id": 4309,
+        "modified_at": "2020-02-10T04:06:00Z",
+        "name": null,
+        "season": "3",
+        "slug": "cs-go-vietnam-pro-league-3-2020",
+        "winner_id": 126641,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-vietnam-pro-league",
+    "url": "https://play.efire.gg/matches",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4299,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4299/600px-CMD368_Championship.png",
+    "modified_at": "2020-01-19T19:23:26Z",
+    "name": "CMD368 Championship",
+    "series": [
+      {
+        "begin_at": "2020-01-20T23:00:00Z",
+        "description": null,
+        "end_at": "2020-01-28T18:43:00Z",
+        "full_name": "2020",
+        "id": 2391,
+        "league_id": 4299,
+        "modified_at": "2020-02-02T23:22:03Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-cmd368-championship-2020",
+        "winner_id": 125847,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-cmd368-championship",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4296,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4296/600px-Great_Universe_Cup.PNG",
+    "modified_at": "2020-01-19T19:23:11Z",
+    "name": "Great Universe",
+    "series": [
+      {
+        "begin_at": "2020-01-15T13:00:00Z",
+        "description": null,
+        "end_at": "2020-02-05T17:14:00Z",
+        "full_name": "Cup 2020",
+        "id": 2384,
+        "league_id": 4296,
+        "modified_at": "2020-02-10T04:03:10Z",
+        "name": "Cup",
+        "season": null,
+        "slug": "cs-go-great-universe-cup-2020",
+        "winner_id": 126150,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-great-universe",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4289,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4289/600px-Mythic_Cup_new.png",
+    "modified_at": "2020-01-19T19:22:54Z",
+    "name": "Mythic Cup",
+    "series": [
+      {
+        "begin_at": "2020-01-03T23:00:00Z",
+        "description": null,
+        "end_at": "2020-01-06T02:53:00Z",
+        "full_name": "Season 5 2020",
+        "id": 2366,
+        "league_id": 4289,
+        "modified_at": "2020-01-06T13:15:34Z",
+        "name": "",
+        "season": "5",
+        "slug": "cs-go-mythic-cup-5-2020",
+        "winner_id": 126726,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-mythic-cup",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4297,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4297/600px-LEGENDS.BET_L33T_CUP.png",
+    "modified_at": "2020-01-19T19:18:03Z",
+    "name": "LEGENDS.BET",
+    "series": [
+      {
+        "begin_at": "2020-01-14T13:00:00Z",
+        "description": null,
+        "end_at": null,
+        "full_name": "L33T Cup 2020",
+        "id": 2385,
+        "league_id": 4297,
+        "modified_at": "2020-01-14T07:57:33Z",
+        "name": "L33T Cup",
+        "season": null,
+        "slug": "cs-go-legends-bet-l33t-cup-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-legends-bet",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4294,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4294/WX_Winter_Invitational.png",
+    "modified_at": "2020-01-11T13:17:43Z",
+    "name": "WX Invitational",
+    "series": [
+      {
+        "begin_at": "2020-01-15T03:00:00Z",
+        "description": null,
+        "end_at": "2020-01-16T15:14:00Z",
+        "full_name": "Thailand Qualifier 2020",
+        "id": 2379,
+        "league_id": 4294,
+        "modified_at": "2020-01-19T17:17:45Z",
+        "name": "Thailand Qualifier",
+        "season": null,
+        "slug": "cs-go-wx-winter-invitational-thailand-qualifier-2020",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2020
+      },
+      {
+        "begin_at": "2020-01-18T03:00:00Z",
+        "description": null,
+        "end_at": "2020-01-22T11:36:00Z",
+        "full_name": "Winter 2020",
+        "id": 2390,
+        "league_id": 4294,
+        "modified_at": "2020-01-26T09:22:09Z",
+        "name": null,
+        "season": "Winter",
+        "slug": "cs-go-wx-winter-invitational-winter-2020",
+        "winner_id": 126806,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-wx-winter-invitational",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4293,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4293/600px-Winners3.png",
+    "modified_at": "2020-01-10T09:27:08Z",
+    "name": "WINNERS League",
+    "series": [
+      {
+        "begin_at": "2019-10-20T22:00:00Z",
+        "description": null,
+        "end_at": "2020-01-24T18:19:00Z",
+        "full_name": "Europe Invite Division season 3 2020",
+        "id": 2375,
+        "league_id": 4293,
+        "modified_at": "2020-01-26T09:29:13Z",
+        "name": "Europe Invite Division",
+        "season": "3",
+        "slug": "cs-go-winners-league-europe-invite-division-3-2020",
+        "winner_id": 126231,
+        "winner_type": "Team",
+        "year": 2020
+      },
+      {
+        "begin_at": "2019-10-22T22:00:00Z",
+        "description": null,
+        "end_at": "2020-01-25T03:37:00Z",
+        "full_name": "North America Invite Division season 3 2020",
+        "id": 2376,
+        "league_id": 4293,
+        "modified_at": "2020-01-26T09:31:38Z",
+        "name": "North America Invite Division",
+        "season": "3",
+        "slug": "cs-go-winners-league-north-america-invite-division-3-2020",
+        "winner_id": 3391,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-winners-league",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4291,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4291/800px-GeForce_Cup_Pacific.png",
+    "modified_at": "2020-01-07T11:12:51Z",
+    "name": "GeForce Cup Pacific",
+    "series": [
+      {
+        "begin_at": "2020-01-11T02:00:00Z",
+        "description": null,
+        "end_at": "2020-01-12T12:10:00Z",
+        "full_name": "2020",
+        "id": 2371,
+        "league_id": 4291,
+        "modified_at": "2020-01-12T16:50:10Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-geforce-cup-pacific-2019",
+        "winner_id": 126443,
+        "winner_type": "Team",
+        "year": 2020
+      }
+    ],
+    "slug": "cs-go-geforce-cup-pacific",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4286,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4286/600px-Nantong_Silk_Road_Esports_Invitational_2019.png",
+    "modified_at": "2019-12-27T16:42:55Z",
+    "name": "Nantong Silk Road Esports Invitational",
+    "series": [
+      {
+        "begin_at": "2019-12-28T04:00:00Z",
+        "description": null,
+        "end_at": "2019-12-29T06:00:00Z",
+        "full_name": "2019",
+        "id": 2353,
+        "league_id": 4286,
+        "modified_at": "2020-01-02T11:02:09Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-nantong-silk-road-esports-invitational-2019",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-nantong-silk-road-esports-invitational",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4285,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4285/600px-GG.Bet_Winter_Cup.png",
+    "modified_at": "2019-12-23T19:45:56Z",
+    "name": "GG.BET",
+    "series": [
+      {
+        "begin_at": "2019-12-24T15:00:00Z",
+        "description": null,
+        "end_at": "2020-01-05T19:45:00Z",
+        "full_name": "Winter Cup 2019",
+        "id": 2352,
+        "league_id": 4285,
+        "modified_at": "2020-01-06T10:05:52Z",
+        "name": null,
+        "season": "Winter Cup",
+        "slug": "cs-go-gg-bet-winter-cup-2019",
+        "winner_id": 3246,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-gg-bet-winter-cup",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4284,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4284/600px-EGB_Siberian_Frost.png",
+    "modified_at": "2019-12-22T13:49:05Z",
+    "name": "EGB Siberian Frost",
+    "series": [
+      {
+        "begin_at": "2019-12-22T19:25:00Z",
+        "description": null,
+        "end_at": "2019-12-28T20:22:00Z",
+        "full_name": "2019",
+        "id": 2351,
+        "league_id": 4284,
+        "modified_at": "2019-12-30T11:00:22Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-egb-siberian-frost-2019",
+        "winner_id": 126288,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-egb-siberian-frost",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4283,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4283/LBET_INVITATIONAL.png",
+    "modified_at": "2019-12-21T11:26:19Z",
+    "name": "LBET Invitational",
+    "series": [
+      {
+        "begin_at": "2019-12-22T11:00:00Z",
+        "description": null,
+        "end_at": "2019-12-29T20:04:00Z",
+        "full_name": "Season 2 2019",
+        "id": 2350,
+        "league_id": 4283,
+        "modified_at": "2019-12-30T11:01:14Z",
+        "name": null,
+        "season": "2",
+        "slug": "cs-go-lbet-invitational-2-2019",
+        "winner_id": 124522,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-lbet-invitational",
+    "url": "",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4282,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4282/600px-Relog_Esports_CSGO.png",
+    "modified_at": "2019-12-18T09:32:59Z",
+    "name": "Relog Esports",
+    "series": [
+      {
+        "begin_at": "2019-12-18T16:00:00Z",
+        "description": null,
+        "end_at": "2019-12-18T22:04:00Z",
+        "full_name": "Online Stage season 1 2019",
+        "id": 2345,
+        "league_id": 4282,
+        "modified_at": "2019-12-19T09:50:53Z",
+        "name": "Online Stage",
+        "season": "1",
+        "slug": "cs-go-relog-esports-online-stage-1-2019",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2019
+      },
+      {
+        "begin_at": "2019-12-21T11:00:00Z",
+        "description": null,
+        "end_at": "2019-12-21T23:38:00Z",
+        "full_name": "Finals season 1 2019",
+        "id": 2346,
+        "league_id": 4282,
+        "modified_at": "2019-12-22T11:35:59Z",
+        "name": "Finals",
+        "season": "1",
+        "slug": "cs-go-relog-esports-finals-1-2019",
+        "winner_id": 126462,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-relog-esports",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4260,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4260/600px-Chinese_Champions_Cup.png",
+    "modified_at": "2019-12-16T15:09:13Z",
+    "name": "Champions Cup",
+    "series": [
+      {
+        "begin_at": "2019-11-22T04:00:00Z",
+        "description": null,
+        "end_at": "2019-11-28T14:01:00Z",
+        "full_name": "2019",
+        "id": 2127,
+        "league_id": 4260,
+        "modified_at": "2019-12-01T19:31:48Z",
+        "name": null,
+        "season": null,
+        "slug": "cs-go-chinese-champions-cup-2019",
+        "winner_id": 3248,
+        "winner_type": "Team",
+        "year": 2019
+      },
+      {
+        "begin_at": "2019-12-18T23:00:00Z",
+        "description": null,
+        "end_at": "2019-12-22T19:24:00Z",
+        "full_name": "Finals 2019",
+        "id": 2344,
+        "league_id": 4260,
+        "modified_at": "2019-12-23T06:07:34Z",
+        "name": "Finals",
+        "season": null,
+        "slug": "cs-go-chinese-champions-cup-finals-2019",
+        "winner_id": 3210,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-chinese-champions-cup",
+    "url": "https://championscup.gg/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4281,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4281/600px-99Damage.png",
+    "modified_at": "2019-12-16T07:37:21Z",
+    "name": "99Damage",
+    "series": [
+      {
+        "begin_at": "2019-12-21T10:00:00Z",
+        "description": null,
+        "end_at": "2019-12-21T19:02:00Z",
+        "full_name": "Division 1 season 13 2019",
+        "id": 2343,
+        "league_id": 4281,
+        "modified_at": "2019-12-22T11:37:00Z",
+        "name": "Division 1",
+        "season": "13",
+        "slug": "cs-go-99damage-division-1-13-2019",
+        "winner_id": 126633,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-99damage",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4280,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4280/Fraglogohighres.png",
+    "modified_at": "2019-12-14T11:00:33Z",
+    "name": "NCS Grand Finals @ Fragadelphia",
+    "series": [
+      {
+        "begin_at": "2019-12-14T15:00:00Z",
+        "description": null,
+        "end_at": "2019-12-16T02:41:00Z",
+        "full_name": "Season 14 2019",
+        "id": 2342,
+        "league_id": 4280,
+        "modified_at": "2019-12-16T07:06:05Z",
+        "name": null,
+        "season": "14",
+        "slug": "cs-go-ncs-grand-finals-2019-fragadelphia-14-2019",
+        "winner_id": 126686,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-ncs-grand-finals-2019-fragadelphia",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4278,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4278/600px-CBCS.png",
+    "modified_at": "2019-12-11T15:43:53Z",
+    "name": "CBCS",
+    "series": [
+      {
+        "begin_at": "2019-12-13T00:00:00Z",
+        "description": null,
+        "end_at": "2019-12-19T03:14:00Z",
+        "full_name": "Season 2 2019",
+        "id": 2335,
+        "league_id": 4278,
+        "modified_at": "2019-12-19T09:55:03Z",
+        "name": null,
+        "season": "2",
+        "slug": "cs-go-cbcs-2-2019",
+        "winner_id": 125955,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-cbcs",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4168,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4168/563px-Beyond_The_Summit_2018.png",
+    "modified_at": "2019-12-11T11:07:32Z",
+    "name": "cs_summit",
+    "series": [
+      {
+        "begin_at": "2017-04-20T10:00:00Z",
+        "description": null,
+        "end_at": "2017-04-23T10:00:00Z",
+        "full_name": "Season 1 2017",
+        "id": 1631,
+        "league_id": 4168,
+        "modified_at": "2019-12-11T11:05:20Z",
+        "name": "",
+        "season": "1",
+        "slug": "cs-go-cs_summit-1-2017",
+        "winner_id": 3207,
+        "winner_type": "Team",
+        "year": 2017
+      },
+      {
+        "begin_at": "2018-02-08T11:00:00Z",
+        "description": null,
+        "end_at": "2018-02-11T11:00:00Z",
+        "full_name": "Season 2 2018",
+        "id": 1632,
+        "league_id": 4168,
+        "modified_at": "2019-12-11T11:05:15Z",
+        "name": "",
+        "season": "2",
+        "slug": "cs-go-cs_summit-2-2018",
+        "winner_id": 3213,
+        "winner_type": "Team",
+        "year": 2018
+      },
+      {
+        "begin_at": "2018-11-01T11:00:00Z",
+        "description": null,
+        "end_at": "2018-11-04T11:00:00Z",
+        "full_name": "Season 3 2018",
+        "id": 1633,
+        "league_id": 4168,
+        "modified_at": "2019-12-11T11:05:11Z",
+        "name": "",
+        "season": "3",
+        "slug": "cs-go-cs_summit-3-2018",
+        "winner_id": 3256,
+        "winner_type": "Team",
+        "year": 2018
+      },
+      {
+        "begin_at": "2019-05-23T16:00:00Z",
+        "description": null,
+        "end_at": "2019-05-27T00:38:00Z",
+        "full_name": "Season 4 2019",
+        "id": 1792,
+        "league_id": 4168,
+        "modified_at": "2019-12-11T11:05:06Z",
+        "name": "",
+        "season": "4",
+        "slug": "cs-go-cs_summit-4-2019",
+        "winner_id": 3455,
+        "winner_type": "Team",
+        "year": 2019
+      },
+      {
+        "begin_at": "2019-12-12T17:00:00Z",
+        "description": null,
+        "end_at": "2019-12-15T04:41:00Z",
+        "full_name": "Season 5 2019",
+        "id": 2331,
+        "league_id": 4168,
+        "modified_at": "2019-12-16T06:49:05Z",
+        "name": "",
+        "season": "5",
+        "slug": "cs-go-cs_summit-5-2019",
+        "winner_id": 3240,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-cs_summit",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4276,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4276/800px-D_nk.png",
+    "modified_at": "2019-12-10T11:17:39Z",
+    "name": "D1nk Cup",
+    "series": [
+      {
+        "begin_at": "2019-12-10T23:00:00Z",
+        "description": null,
+        "end_at": "2019-12-11T23:00:00Z",
+        "full_name": "Season 1 2019",
+        "id": 2332,
+        "league_id": 4276,
+        "modified_at": "2020-01-02T10:48:58Z",
+        "name": null,
+        "season": "1",
+        "slug": "cs-go-d1nk-cup-1-2019",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-d1nk-cup",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4274,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4274/600px-Polska_Liga_Esportowa.png",
+    "modified_at": "2019-12-06T15:32:25Z",
+    "name": "Polish Esports League",
+    "series": [
+      {
+        "begin_at": "2019-12-07T09:00:00Z",
+        "description": null,
+        "end_at": "2019-12-08T22:04:00Z",
+        "full_name": "Finals Autumn 2019",
+        "id": 2323,
+        "league_id": 4274,
+        "modified_at": "2019-12-09T08:50:35Z",
+        "name": "Finals",
+        "season": "Autumn",
+        "slug": "cs-go-polish-esports-league-finals-2019",
+        "winner_id": 125770,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-polish-esports-league",
+    "url": "http://polskaligaesportowa.pl/",
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  },
+  {
+    "id": 4272,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4272/Svenska_Elitserien_2018_Logo.png",
+    "modified_at": "2019-12-05T10:21:28Z",
+    "name": "Svenska Elitserien",
+    "series": [
+      {
+        "begin_at": "2019-12-06T17:00:00Z",
+        "description": null,
+        "end_at": "2019-12-07T21:16:00Z",
+        "full_name": "Fall 2019",
+        "id": 2320,
+        "league_id": 4272,
+        "modified_at": "2019-12-09T08:56:12Z",
+        "name": null,
+        "season": "Fall",
+        "slug": "cs-go-svenska-elitserien-fall-2020",
+        "winner_id": 126589,
+        "winner_type": "Team",
+        "year": 2019
+      }
+    ],
+    "slug": "cs-go-svenska-elitserien",
+    "url": null,
+    "videogame": {
+      "current_version": null,
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    }
+  }
+]
