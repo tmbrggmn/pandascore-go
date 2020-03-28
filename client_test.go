@@ -1,10 +1,12 @@
 package pandascore
 
 import (
+	"net/http"
 	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"gopkg.in/h2non/gock.v1"
 )
 
 func TestAccessToken_IsValid(t *testing.T) {
@@ -38,4 +40,21 @@ func TestNew_withExplicitAccessTokenSetting(t *testing.T) {
 	assert.NotNil(t, result)
 	assert.IsType(t, &Client{}, result)
 	assert.EqualValues(t, "explicit_access_token", result.AccessToken)
+}
+
+func TestRequest(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		Reply(http.StatusOK).
+		File("testdata/runningCSGOSeries.json")
+
+	client := New()
+	series := new([]Series)
+	err := client.Request(CSGO, "series/running", series)
+
+	assert.Nil(t, err)
+	assert.NotNil(t, series)
+	assert.Len(t, *series, 2)
 }

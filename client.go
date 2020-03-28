@@ -3,6 +3,8 @@ package pandascore
 
 import (
 	"encoding/json"
+	"fmt"
+	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -39,26 +41,42 @@ func New() *Client {
 	return c
 }
 
-func (c *Client) buildRequestURL(game Game, path string) *url.URL {
-	return c.baseUrl.ResolveReference(&url.URL{Path: string(game) + "/" + path})
+// Execute a new request against the PandaScore API and marshal the response body in the value pointed to by value
+// parameter. You shouldn't really need to use this method since most of the endpoints (eg. series, matches, ...) are
+// abstracted by other methods, but its here if you need it.
+func (c *Client) Request(game Game, path string, value interface{}) error {
+	if !game.IsValid() {
+		return fmt.Errorf("unknown game '%s'", game)
+	}
+
+	request, err := c.buildRequest(game, path)
+	if err != nil {
+		log.Printf("unable to build new PandaScore request: %s", err)
+		return err
+	}
+
+	response, err := c.httpClient.Do(request)
+	if err != nil {
+		log.Printf("PandaScore request failed with error: %s", err)
+		return err
+	}
+
+	err = c.unmarshallResponse(response, value)
+	if err != nil {
+		log.Printf("Failed to unmarshal PandaScore response: %s", err)
+	}
+	return err
 }
 
 func (c *Client) buildRequest(game Game, path string) (*http.Request, error) {
-	return http.NewRequest("GET", c.buildRequestURL(game, path).String(), nil)
-}
-
-func (c *Client) executeRequest(request *http.Request) (*http.Response, error) {
-	return c.httpClient.Do(request)
-}
-
-func (c *Client) doRequest(game Game, path string, value interface{}) error {
-	return nil
+	requestURL := c.baseUrl.ResolveReference(&url.URL{Path: string(game) + "/" + path}).String()
+	return http.NewRequest("GET", requestURL, nil)
 }
 
 func (c *Client) unmarshallResponse(response *http.Response, value interface{}) error {
 	defer response.Body.Close()
 
-	// If the response is successful, unmarshal the body. If not, get the error message in the body.
+	// If the response is successful; unmarshal the body. If not; unmarshal the error message in the body.
 	if response.StatusCode >= 200 && response.StatusCode <= 299 {
 		return json.NewDecoder(response.Body).Decode(value)
 	} else {
