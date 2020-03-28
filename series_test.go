@@ -1,6 +1,7 @@
 package pandascore
 
 import (
+	"fmt"
 	"net/http"
 	"testing"
 
@@ -22,10 +23,26 @@ func TestGetRunningSeries(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, result)
 	assert.Len(t, result, 2)
-	assert.Equal(t, 2522, result[0].ID)
-	assert.Equal(t, "ANZ Champs: Online Stage season 10 2020", result[0].FullName)
-	assert.Equal(t, 2528, result[1].ID)
-	assert.Equal(t, "Pro League season 11 2020", result[1].FullName)
+}
+
+func ExampleGetRunningSeries() {
+	defer gock.Off()
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		Reply(http.StatusOK).
+		File("testdata/runningCSGOSeries.json")
+
+	client := New()
+	result, err := client.GetRunningSeries(CSGO)
+
+	if err != nil {
+		fmt.Printf("Failed to get running series: %s", err)
+	} else {
+		fmt.Printf("Found %d series with ID %d and %d", len(result), result[0].ID, result[1].ID)
+	}
+
+	// Output:
+	// Found 2 series with ID 2522 and 2528
 }
 
 func TestGetRunningSeries_withInvalidAccessToken(t *testing.T) {

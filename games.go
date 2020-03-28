@@ -1,13 +1,9 @@
-// Consume the PandaScore API in Go.
 package pandascore
 
-// AccessToken represents a PandaScore access token.
-type AccessToken string
-
-// Validates that the access token is valid.
-func (at AccessToken) IsValid() bool {
-	return len(at) > 1
-}
+const (
+	CSGO  Game = "csgo"
+	Dota2 Game = "dota2"
+)
 
 // Game represents a single game in the PandaScore API (eg. csgo, dota2, ...)
 type Game string

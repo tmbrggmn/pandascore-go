@@ -15,9 +15,6 @@ const (
 	// AccessTokenEnvironmentVariable contains the name of the environment variable that points to the PandaScore
 	// access token
 	AccessTokenEnvironmentVariable string = "PANDASCORE_ACCESS_TOKEN"
-
-	CSGO  Game = "csgo"
-	Dota2 Game = "dota2"
 )
 
 // PandaScore client which is the primary entity.
@@ -54,6 +51,10 @@ func (c *Client) executeRequest(request *http.Request) (*http.Response, error) {
 	return c.httpClient.Do(request)
 }
 
+func (c *Client) doRequest(game Game, path string, value interface{}) error {
+	return nil
+}
+
 func (c *Client) unmarshallResponse(response *http.Response, value interface{}) error {
 	defer response.Body.Close()
 
@@ -68,4 +69,21 @@ func (c *Client) unmarshallResponse(response *http.Response, value interface{}) 
 		}
 		return err
 	}
+}
+
+// AccessToken represents a PandaScore access token.
+type AccessToken string
+
+// Validates that the access token is valid.
+func (at AccessToken) IsValid() bool {
+	return len(at) > 1
+}
+
+// Represents an error coming directly from the PandaScore API (eg. no or invalid access token).
+type PandaScoreError struct {
+	Message string `json:"error"`
+}
+
+func (pse *PandaScoreError) Error() string {
+	return "PandaScore error: " + pse.Message
 }

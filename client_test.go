@@ -1,18 +1,11 @@
 package pandascore
 
 import (
-	"fmt"
 	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
-
-func TestGame_IsValid(t *testing.T) {
-	assert.True(t, CSGO.IsValid())
-	assert.True(t, Dota2.IsValid())
-	assert.False(t, Game("doesn't exist").IsValid())
-}
 
 func TestAccessToken_IsValid(t *testing.T) {
 	assert.True(t, AccessToken("sa").IsValid())
@@ -45,13 +38,4 @@ func TestNew_withExplicitAccessTokenSetting(t *testing.T) {
 	assert.NotNil(t, result)
 	assert.IsType(t, &Client{}, result)
 	assert.EqualValues(t, "explicit_access_token", result.AccessToken)
-}
-
-func ExampleNew_withExplicitAccessTokenSetting() {
-	client := New()
-	client.AccessToken = "explicit_access_token"
-	fmt.Println(client.AccessToken)
-
-	// Output:
-	// explicit_access_token
 }
