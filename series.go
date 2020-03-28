@@ -12,7 +12,6 @@ func (c *Client) GetRunningSeries(game Game) ([]Series, error) {
 	}
 
 	request, err := c.buildRequest(game, "series/running")
-	log.Printf("Request: %+v", request)
 	if err != nil {
 		log.Printf("Unable to build new PandaScore request: %s", err)
 		return nil, err
@@ -30,4 +29,14 @@ func (c *Client) GetRunningSeries(game Game) ([]Series, error) {
 		log.Printf("Failed to unmarshal PandaScore response: %s", err)
 	}
 	return *series, err
+}
+
+// Series represents an instance of a league event.
+//
+// See Also
+//
+// https://developers.pandascore.co/doc/#section/Introduction/Events-hierarchy
+type Series struct {
+	ID       int    `json:"id"`
+	FullName string `json:"full_name"`
 }
