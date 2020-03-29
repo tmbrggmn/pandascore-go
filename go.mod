@@ -1,4 +1,4 @@
-module pandascore-go
+module github.com/tmbrggmn/pandascore-go
 
 go 1.14
 
