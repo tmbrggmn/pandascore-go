@@ -28,8 +28,7 @@ func (o Order) forField(field string) string {
 }
 
 // PandaScore API request with it's attributes
-//
-// TODO add support for range
+// TODO: add support for range
 type Request struct {
 	client *Client
 	game   Game
@@ -109,7 +108,12 @@ func buildRequest(request *Request) (*http.Request, error) {
 	addQueryParameterFromMap(request.filter, "filter", requestURL)
 	addQueryParameterFromMap(request.search, "search", requestURL)
 	addSortQueryParameter(request, requestURL)
-	return http.NewRequest("GET", requestURL.String(), nil)
+
+	httpRequest, err := http.NewRequest("GET", requestURL.String(), nil)
+	if len(request.client.accessToken) > 0 {
+		httpRequest.Header.Add("Authorization", "Bearer "+request.client.accessToken)
+	}
+	return httpRequest, err
 }
 
 func addQueryParameterFromMap(keysAndValues map[string]string, parameter string, requestURL *url.URL) {

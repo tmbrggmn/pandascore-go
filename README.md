@@ -20,6 +20,19 @@ TODO
 
 TODO
 
-## Contributing
+## Integration tests
 
-TODO
+In order to run the [integration tests](integration_test.go) you'll need to do 2 things:
+ 1. Add your on `.env` file to the root of the project 
+ 2. Enable integration tests by enabling the `integration` build flag
+
+To set the **PandaScore access token**, simple create a new .env file in the root
+of the project and add your [PandaScore access token](https://pandascore.co/settings) in the `PANDASCORE_ACCESS_TOKEN` 
+variable. For example:
+
+```dotenv
+PANDASCORE_ACCESS_TOKEN=my_pandascore_access_token
+```
+
+Integration tests are marked with the `integration` build flag, so to run them
+we need to **enable integration tests** when running the test: `go test -tags=integration` 
