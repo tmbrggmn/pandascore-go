@@ -10,16 +10,14 @@ import (
 )
 
 const (
-	// Sort in ascending order
-	Ascending Order = 0
-	// Sort in descending order
-	Descending Order = 1
+	Ascending  Sorting = 0
+	Descending Sorting = 1
 )
 
-// Order used for specifying sorting parameters.
-type Order byte
+// Sorting used for specifying sorting parameters.
+type Sorting byte
 
-func (o Order) forField(field string) string {
+func (o Sorting) forField(field string) string {
 	if o == Descending {
 		return "-" + field
 	} else {
@@ -68,7 +66,7 @@ func (r *Request) Search(field string, value string) *Request {
 // Adds a sort parameter to the request.
 //
 // More information: https://developers.pandascore.co/doc/index.htm#section/Introduction/Sorting
-func (r *Request) Sort(field string, order Order) *Request {
+func (r *Request) Sort(field string, order Sorting) *Request {
 	if r.sort == nil {
 		r.sort = []string{}
 	}
