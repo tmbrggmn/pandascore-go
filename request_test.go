@@ -7,9 +7,35 @@ import (
 )
 
 func TestRequest_Filter(t *testing.T) {
-	request := new(Request).Filter("field", "value")
+	request := new(Request).Filter("name", "ESL").Filter("slug", "cs-go-esl")
 
 	assert.NotNil(t, request)
-	assert.Len(t, request.filter, 1)
-	assert.Equal(t, map[string]string{"field": "value"}, request.filter)
+	assert.Len(t, request.filter, 2)
+	assert.Equal(t, map[string]string{"name": "ESL", "slug": "cs-go-esl"}, request.filter)
+}
+
+func TestRequest_Search(t *testing.T) {
+	request := new(Request).
+		Search("name", "ESL").
+		Search("slug", "cs-go-esl")
+
+	assert.NotNil(t, request)
+	assert.Len(t, request.search, 2)
+	assert.Equal(t, map[string]string{"name": "ESL", "slug": "cs-go-esl"}, request.search)
+}
+
+func TestRequest_Sort(t *testing.T) {
+	request := new(Request).Sort("name", Descending).Sort("modified_at", Ascending)
+
+	assert.NotNil(t, request)
+	assert.Len(t, request.sort, 2)
+	assert.Equal(t, []string{"-name", "modified_at"}, request.sort)
+}
+
+func TestRequest_Page(t *testing.T) {
+	request := new(Request).Page(2)
+	assert.Equal(t, 2, request.page, "Expected page to be 2 after it is set to 2")
+
+	request.Page(-1)
+	assert.Equal(t, 1, request.page, "Expected page to be 1 after it is set to a negative value")
 }

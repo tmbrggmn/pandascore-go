@@ -1,0 +1,174 @@
+[
+  {
+    "begin_at": "2020-03-03T07:30:00Z",
+    "description": null,
+    "end_at": null,
+    "full_name": "ANZ Champs: Online Stage season 10 2020",
+    "id": 2523,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "modified_at": "2020-03-12T08:00:31Z",
+    "name": "ANZ Champs: Online Stage",
+    "season": "10",
+    "slug": "cs-go-esl-anz-champs-anz-champs-online-stage-10-2020",
+    "tournaments": [
+      {
+        "begin_at": "2020-03-03T07:30:00Z",
+        "end_at": "2020-03-14T06:32:00Z",
+        "id": 3770,
+        "league_id": 4158,
+        "live_supported": false,
+        "modified_at": "2020-03-16T16:32:25Z",
+        "name": "Stage 1",
+        "prizepool": null,
+        "serie_id": 2522,
+        "slug": "cs-go-esl-anz-champs-online-stage-10-2020-stage-1",
+        "winner_id": 125874,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2020-03-16T23:00:00Z",
+        "end_at": null,
+        "id": 3825,
+        "league_id": 4158,
+        "live_supported": false,
+        "modified_at": "2020-03-24T10:04:18Z",
+        "name": "Stage 2",
+        "prizepool": null,
+        "serie_id": 2522,
+        "slug": "cs-go-esl-anz-champs-anz-champs-online-stage-10-2020-stage-2",
+        "winner_id": null,
+        "winner_type": null
+      },
+      {
+        "begin_at": "2020-04-04T22:00:00Z",
+        "end_at": "2020-04-04T22:00:00Z",
+        "id": 3880,
+        "league_id": 4158,
+        "live_supported": false,
+        "modified_at": "2020-03-26T14:30:19Z",
+        "name": "Season Finals",
+        "prizepool": null,
+        "serie_id": 2522,
+        "slug": "cs-go-esl-anz-champs-anz-champs-online-stage-10-2020-season-finals",
+        "winner_id": null,
+        "winner_type": null
+      }
+    ],
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "winner_id": null,
+    "winner_type": null,
+    "year": 2020
+  },
+  {
+    "begin_at": "2020-03-15T23:00:00Z",
+    "description": null,
+    "end_at": null,
+    "full_name": "Pro League season 11 2020",
+    "id": 2529,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "modified_at": "2020-03-05T19:39:40Z",
+    "name": "Pro League",
+    "season": "11",
+    "slug": "cs-go-esl-pro-league-11-2020",
+    "tournaments": [
+      {
+        "begin_at": "2020-03-16T13:25:00Z",
+        "end_at": null,
+        "id": 3780,
+        "league_id": 4158,
+        "live_supported": true,
+        "modified_at": "2020-03-14T18:33:54Z",
+        "name": "Group A",
+        "prizepool": null,
+        "serie_id": 2528,
+        "slug": "cs-go-esl-pro-league-11-2020-group-a",
+        "winner_id": null,
+        "winner_type": null
+      },
+      {
+        "begin_at": "2020-03-17T13:25:00Z",
+        "end_at": null,
+        "id": 3781,
+        "league_id": 4158,
+        "live_supported": true,
+        "modified_at": "2020-03-13T18:01:39Z",
+        "name": "Group B",
+        "prizepool": null,
+        "serie_id": 2528,
+        "slug": "cs-go-esl-pro-league-11-2020-group-b",
+        "winner_id": null,
+        "winner_type": null
+      },
+      {
+        "begin_at": "2020-03-24T23:00:00Z",
+        "end_at": null,
+        "id": 3802,
+        "league_id": 4158,
+        "live_supported": true,
+        "modified_at": "2020-03-11T13:59:13Z",
+        "name": "Play-in",
+        "prizepool": null,
+        "serie_id": 2528,
+        "slug": "cs-go-esl-pro-league-11-2020-play-in",
+        "winner_id": null,
+        "winner_type": null
+      },
+      {
+        "begin_at": "2020-03-26T13:25:00Z",
+        "end_at": null,
+        "id": 3782,
+        "league_id": 4158,
+        "live_supported": true,
+        "modified_at": "2020-03-21T20:08:34Z",
+        "name": "Group C",
+        "prizepool": null,
+        "serie_id": 2528,
+        "slug": "cs-go-esl-pro-league-11-2020-group-c",
+        "winner_id": null,
+        "winner_type": null
+      },
+      {
+        "begin_at": "2020-03-27T13:25:00Z",
+        "end_at": null,
+        "id": 3783,
+        "league_id": 4158,
+        "live_supported": true,
+        "modified_at": "2020-03-13T17:59:20Z",
+        "name": "Group D",
+        "prizepool": null,
+        "serie_id": 2528,
+        "slug": "cs-go-esl-pro-league-11-2020-group-d",
+        "winner_id": null,
+        "winner_type": null
+      }
+    ],
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "winner_id": null,
+    "winner_type": null,
+    "year": 2020
+  }
+]

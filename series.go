@@ -5,7 +5,7 @@ import "time"
 // Returns the currently ongoing series for the given game.
 func (c *Client) GetRunningSeries(game Game) ([]Series, error) {
 	series := new([]Series)
-	err := c.Request(game, "series/running", series).Execute()
+	_, err := c.Request(game, "series/running", series).Get()
 	return *series, err
 }
 

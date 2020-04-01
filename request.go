@@ -30,6 +30,7 @@ type Request struct {
 	filter map[string]string
 	search map[string]string
 	sort   []string
+	page   int
 }
 
 // Adds a filter parameter to the request, where the given field must match the given value.
@@ -67,6 +68,18 @@ func (r *Request) Sort(field string, order Sorting) *Request {
 	}
 	if len(field) > 0 {
 		r.sort = append(r.sort, order.forField(field))
+	}
+	return r
+}
+
+// Adds the given page number to the request. Input cannot be <= 0, if it is then the page is set to 1.
+//
+// More information: https://developers.pandascore.co/doc/index_dota2.htm#section/Introduction/Pagination
+func (r *Request) Page(page int) *Request {
+	if page > 0 {
+		r.page = page
+	} else {
+		r.page = 1
 	}
 	return r
 }
