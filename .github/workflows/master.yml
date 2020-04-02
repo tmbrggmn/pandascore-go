@@ -30,7 +30,7 @@ jobs:
     - name: Codecov
       uses: codecov/codecov-action@v1.0.6
       with:
-        file: profilec.cov
+        file: profile.cov
         fail_ci_if_error: true
     
     - name: Coveralls
