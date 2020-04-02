@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    name: Build
+    name: Build & test
     runs-on: ubuntu-latest
     steps:
     - name: Set up Go
@@ -26,6 +26,12 @@ jobs:
   
     - name: Test
       run: go test -v -race -covermode atomic -coverprofile=profile.cov ./...
+    
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.6
+      with:
+        file: profilec.cov
+        fail_ci_if_error: true
     
     - name: Coveralls
       uses: shogo82148/actions-goveralls@v1
