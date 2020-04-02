@@ -13,6 +13,7 @@ func TestRequest_Get(t *testing.T) {
 	defer assert.True(t, gock.IsDone())
 
 	gock.New("https://api.pandascore.co/csgo/series/running").
+		MatchHeader("Authorization", "test_access_token").
 		Reply(http.StatusOK).
 		File("testdata/csgo-series-running.json").
 		SetHeader("X-Page", "1").
@@ -20,7 +21,10 @@ func TestRequest_Get(t *testing.T) {
 		SetHeader("X-Total", "20")
 
 	series := new([]Series)
-	response, err := New().Request(CSGO, "series/running", series).Get()
+	response, err := New().
+		AccessToken("test_access_token").
+		Request(CSGO, "series/running", series).
+		Get()
 
 	assert.Nil(t, err)
 	assert.NotNil(t, series)
@@ -85,11 +89,53 @@ func TestRequest_Get_Filter_withMultipleValues(t *testing.T) {
 		File("testdata/csgo-leagues-esl.json")
 
 	leagues := new([]League)
-	client := New()
-	_, err := client.
+	_, err := New().
 		Request(CSGO, "leagues", leagues).
 		Filter("name", "ESL", "IEM").
 		Filter("slug", "cs-go-esl").
+		Get()
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Get_Search(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("search[name]", "ESL").
+		MatchParam("search[slug]", "cs-go-esl").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	_, err := New().
+		Request(CSGO, "leagues", leagues).
+		Search("name", "ESL").
+		Search("slug", "cs-go-esl").
+		Get()
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Get_Sort(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("sort", "name,-modified_at").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	_, err := New().
+		Request(CSGO, "leagues", leagues).
+		Sort("name", Ascending).
+		Sort("modified_at", Descending).
 		Get()
 
 	assert.Nil(t, err)

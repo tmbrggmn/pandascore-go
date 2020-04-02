@@ -59,31 +59,53 @@ func constructResponse(httpResponse *http.Response) Response {
 
 func buildRequest(request *Request) (*http.Request, error) {
 	requestURL := request.client.baseURL.ResolveReference(&url.URL{Path: string(request.game) + "/" + request.path})
-	addQueryParameterFromMap(request.filter, "filter", requestURL)
-	addQueryParameterFromMap(request.search, "search", requestURL)
-	addSortQueryParameter(request, requestURL)
+	requestURL.RawQuery = setQueryParameters(request, requestURL.Query())
 
+	// Add the bearer token if it's set in the request
 	httpRequest, err := http.NewRequest("GET", requestURL.String(), nil)
-	if err != nil && len(request.client.accessToken) > 0 {
-		httpRequest.Header.Add("Authorization", "Bearer "+request.client.accessToken)
+	if err != nil {
+		return nil, err
+	} else {
+		setAuthorizationHeader(request, httpRequest)
 	}
-	return httpRequest, err
+
+	return httpRequest, nil
 }
 
-func addQueryParameterFromMap(keysAndValues map[string]string, parameter string, requestURL *url.URL) {
+func setQueryParameters(request *Request, query url.Values) string {
+	addQueryParameterFromMap("filter", request.filter, query)
+	addQueryParameterFromMap("search", request.search, query)
+	addSortingQueryParameter(request.sort, query)
+	addPagingQueryParameter(request.page, query)
+	return query.Encode()
+}
+
+func addQueryParameterFromMap(parameter string, keysAndValues map[string]string, query url.Values) {
 	if keysAndValues != nil && len(keysAndValues) > 0 {
-		query := requestURL.Query()
 		for key, value := range keysAndValues {
 			query.Set(parameter+"["+key+"]", value)
 		}
-		requestURL.RawQuery = query.Encode()
 	}
 }
 
-func addSortQueryParameter(request *Request, requestURL *url.URL) {
-	query := requestURL.Query()
-	query.Add("sort", strings.Join(request.sort, ","))
-	requestURL.RawQuery = query.Encode()
+func addSortingQueryParameter(sorting []string, query url.Values) {
+	if len(sorting) > 0 {
+		query.Add("sort", strings.Join(sorting, ","))
+	}
+}
+
+func addPagingQueryParameter(page int, query url.Values) {
+	if page > 1 {
+		query.Add("page", strconv.Itoa(page))
+	}
+}
+
+func setAuthorizationHeader(request *Request, httpRequest *http.Request) {
+	if len(request.client.accessToken) > 0 {
+		httpRequest.Header.Add("Authorization", "Bearer "+request.client.accessToken)
+	} else {
+		log.Print("Warning: PandaScore access token hasn't been set, requests may fail")
+	}
 }
 
 func unmarshallResponseBody(response *http.Response, value interface{}) error {
