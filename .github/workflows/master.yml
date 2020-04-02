@@ -32,8 +32,3 @@ jobs:
       with:
         file: profile.cov
         fail_ci_if_error: true
-    
-    - name: Coveralls
-      uses: shogo82148/actions-goveralls@v1
-      with:
-        path-to-profile: profile.cov 
