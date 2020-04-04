@@ -23,8 +23,8 @@ func TestRequest_Get(t *testing.T) {
 	series := new([]Series)
 	response, err := New().
 		AccessToken("test_access_token").
-		Request(CSGO, "series/running", series).
-		Get()
+		Request(CSGO, "series/running").
+		Get(series)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, series)
@@ -34,8 +34,44 @@ func TestRequest_Get(t *testing.T) {
 	assert.False(t, response.HasMore())
 }
 
+func TestRequest_GetAll(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		Reply(http.StatusOK).
+		File("testdata/csgo-series-running.json").
+		SetHeader("X-Page", "1").
+		SetHeader("X-Per-Page", "20").
+		SetHeader("X-Total", "40")
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		MatchParam("page", "2").
+		Reply(http.StatusOK).
+		File("testdata/csgo-series-running2.json").
+		SetHeader("X-Page", "2").
+		SetHeader("X-Per-Page", "20").
+		SetHeader("X-Total", "40")
+
+	seriesPtr := new([]Series)
+	response, err := New().
+		AccessToken("test_access_token").
+		Request(CSGO, "series/running").
+		GetAll(seriesPtr)
+
+	series := *seriesPtr
+
+	assert.Nil(t, err)
+	assert.NotNil(t, series)
+	assert.Len(t, series, 4)
+	assert.Equal(t, []int{2522, 2528, 2523, 2529}, []int{series[0].ID, series[1].ID, series[2].ID, series[3].ID})
+	assert.NotNil(t, response)
+	assert.Equal(t, Response{CurrentPage: 2, ResultsPerPage: 20, TotalResults: 40}, response)
+	assert.False(t, response.HasMore())
+}
+
 func TestRequest_Get_invalidGame(t *testing.T) {
-	_, err := New().Request(Game("doesn't exist"), "series/running", nil).Get()
+	_, err := New().Request(Game("doesn't exist"), "series/running").Get(nil)
 
 	assert.NotNil(t, err)
 	assert.Contains(t, err.Error(), "doesn't exist")
@@ -49,7 +85,7 @@ func TestRequest_Get_missingAccessToken(t *testing.T) {
 		Reply(http.StatusForbidden).
 		File("testdata/error-missing-access-token.json")
 
-	_, err := New().Request(CSGO, "series/running", nil).Get()
+	_, err := New().Request(CSGO, "series/running").Get(nil)
 
 	assert.NotNil(t, err)
 	assert.IsType(t, &PandaScoreError{}, err)
@@ -68,10 +104,10 @@ func TestRequest_Get_Filter(t *testing.T) {
 
 	leagues := new([]League)
 	_, err := New().
-		Request(CSGO, "leagues", leagues).
+		Request(CSGO, "leagues").
 		Filter("name", "ESL").
 		Filter("slug", "cs-go-esl").
-		Get()
+		Get(leagues)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, leagues)
@@ -90,10 +126,10 @@ func TestRequest_Get_Filter_withMultipleValues(t *testing.T) {
 
 	leagues := new([]League)
 	_, err := New().
-		Request(CSGO, "leagues", leagues).
+		Request(CSGO, "leagues").
 		Filter("name", "ESL", "IEM").
 		Filter("slug", "cs-go-esl").
-		Get()
+		Get(leagues)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, leagues)
@@ -112,10 +148,10 @@ func TestRequest_Get_Search(t *testing.T) {
 
 	leagues := new([]League)
 	_, err := New().
-		Request(CSGO, "leagues", leagues).
+		Request(CSGO, "leagues").
 		Search("name", "ESL").
 		Search("slug", "cs-go-esl").
-		Get()
+		Get(leagues)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, leagues)
@@ -133,10 +169,10 @@ func TestRequest_Get_Sort(t *testing.T) {
 
 	leagues := new([]League)
 	_, err := New().
-		Request(CSGO, "leagues", leagues).
+		Request(CSGO, "leagues").
 		Sort("name", Ascending).
 		Sort("modified_at", Descending).
-		Get()
+		Get(leagues)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, leagues)

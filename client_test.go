@@ -34,11 +34,10 @@ func TestClient_AccessToken_withExplicitAccessTokenSetting(t *testing.T) {
 }
 
 func TestClient_Request(t *testing.T) {
-	result := New().Request(CSGO, "/path", &[]string{})
+	result := New().Request(CSGO, "/path")
 
 	assert.NotNil(t, result)
 	assert.IsType(t, &Request{}, result)
 	assert.Equal(t, CSGO, result.game)
 	assert.Equal(t, "/path", result.path)
-	assert.Equal(t, &[]string{}, result.value)
 }

@@ -18,7 +18,7 @@ func TestGetLeagues(t *testing.T) {
 		File("testdata/csgo-leagues.json")
 
 	client := New()
-	result, err := client.GetLeagues(CSGO)
+	result, err := client.GetAllLeagues(CSGO)
 
 	assert.Nil(t, err)
 	assert.NotNil(t, result)

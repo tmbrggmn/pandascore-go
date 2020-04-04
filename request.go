@@ -26,7 +26,6 @@ type Request struct {
 	client *Client
 	game   Game
 	path   string
-	value  interface{}
 	filter map[string]string
 	search map[string]string
 	sort   []string

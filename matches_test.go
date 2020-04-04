@@ -2,30 +2,32 @@ package pandascore
 
 import (
 	"net/http"
+	"strconv"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/h2non/gock.v1"
 )
 
-func TestClient_GetAllRunningSeries(t *testing.T) {
+func TestClient_GetAllUpcomingMatches(t *testing.T) {
 	defer gock.Off()
 	defer assert.True(t, gock.IsDone())
 
-	gock.New("https://api.pandascore.co/csgo/series/running").
+	gock.New("https://api.pandascore.co/csgo/matches/upcoming").
+		MatchParam("filter[serie_id]", strconv.Itoa(2528)).
 		Reply(http.StatusOK).
-		File("testdata/csgo-series-running.json")
+		File("testdata/csgo-matches-upcoming.json")
 
 	client := New()
-	result, err := client.GetAllRunningSeries(CSGO)
+	result, err := client.GetAllUpcomingMatches(CSGO, Series{ID: 2528})
 
 	assert.Nil(t, err)
 	assert.NotNil(t, result)
-	assert.IsType(t, []Series{}, result)
-	assert.Len(t, result, 2)
+	assert.IsType(t, []Match{}, result)
+	assert.Len(t, result, 3)
 }
 
-func TestClient_GetAllRunningSeries_withPaging(t *testing.T) {
+func TestClient_GetAllUpcomingMatches_withPaging(t *testing.T) {
 	defer gock.Off()
 	defer assert.True(t, gock.IsDone())
 

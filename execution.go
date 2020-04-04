@@ -10,12 +10,11 @@ import (
 	"strings"
 )
 
-// Execute the request against the PandaScore API and marshal the response body in the value pointed to by value. In
-// case there was an error executing the request, an empty response struct is returned.
+// Execute a single request against the PandaScore API to fetch the first page of results and marshal the response body
+// in the struct pointed to by value. Typically value will be an array of some struct, eg. []Series
 //
-// Important note: state of the request is maintained ever after execution, so be sure to update any sort or paging
-// parameters after execution if you need to.
-func (r *Request) Get() (Response, error) {
+// In case there was an error executing the request, an empty response struct is returned.
+func (r *Request) Get(value interface{}) (Response, error) {
 	if !r.game.IsValid() {
 		return Response{}, fmt.Errorf("unknown game '%s'", r.game)
 	}
@@ -32,13 +31,60 @@ func (r *Request) Get() (Response, error) {
 		return Response{}, err
 	}
 
-	err = unmarshallResponseBody(httpResponse, r.value)
+	err = unmarshallResponseBody(httpResponse, value)
 	if err != nil {
 		log.Printf("failed to unmarshal PandaScore response: %s", err)
 		return Response{}, err
 	}
 
 	return constructResponse(httpResponse), nil
+}
+
+// Execute multiple requests against the PandaScore API to fetch all results from all pages and marshal the response
+// body in the struct pointed to by value. Typically value will be an array of some struct, eg. []League
+//
+// In case there was an error executing the request, an empty response struct is returned.
+func (r *Request) GetAll(value interface{}) (Response, error) {
+	// Get the first page of results and store them into a generic map so we can merge all results into that
+	jsonResponseAsMap := new([]map[string]interface{})
+	response, err := r.Get(jsonResponseAsMap)
+	if err != nil {
+		log.Printf("unable to get first page of PandaScore request: %s", err)
+		return Response{}, err
+	}
+
+	// Keep fetching results as long as there are more pages and merge the next results into the jsonResponseAsMap
+	if response.HasMore() {
+		for {
+			nextJsonResponseAsMap := new([]map[string]interface{})
+			nextPage := response.CurrentPage + 1
+
+			response, err = r.Page(nextPage).Get(nextJsonResponseAsMap)
+			if err != nil {
+				return Response{}, err
+			}
+
+			*jsonResponseAsMap = append(*jsonResponseAsMap, *nextJsonResponseAsMap...)
+
+			if !response.HasMore() {
+				break
+			}
+		}
+	}
+
+	// Convert the map to JSON, then back to struct
+	mergedJsonMapAsJson, err := json.Marshal(jsonResponseAsMap)
+	if err != nil {
+		log.Printf("Failed to marshall merged response map to JSON: %s", err)
+		return Response{}, err
+	}
+	err = json.Unmarshal(mergedJsonMapAsJson, value)
+	if err != nil {
+		log.Printf("Failed to unmarshall merged response map to struct: %s", err)
+		return Response{}, err
+	}
+
+	return response, nil
 }
 
 func constructResponse(httpResponse *http.Response) Response {

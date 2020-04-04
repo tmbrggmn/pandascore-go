@@ -45,12 +45,11 @@ func (c *Client) AccessToken(accessToken string) *Client {
 	return c
 }
 
-// Construct a new request for the given game with the given path and with a pointer to the value for the result.
-func (c *Client) Request(game Game, path string, value interface{}) *Request {
+// Construct a new request for the given game with the given path.
+func (c *Client) Request(game Game, path string) *Request {
 	return &Request{
 		client: c,
 		game:   game,
 		path:   path,
-		value:  value,
 	}
 }

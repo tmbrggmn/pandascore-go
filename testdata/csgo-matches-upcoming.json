@@ -1,0 +1,494 @@
+[
+  {
+    "begin_at": "2020-04-04T12:25:00Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16094,
+        "length": null,
+        "match_id": 556658,
+        "position": 1,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16095,
+        "length": null,
+        "match_id": 556658,
+        "position": 2,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16096,
+        "length": null,
+        "match_id": 556658,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 556658,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "live": {
+      "opens_at": "2020-04-04T12:10:00Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/556658"
+    },
+    "live_url": null,
+    "match_type": "best_of",
+    "modified_at": "2020-04-04T01:06:34Z",
+    "name": "FaZe vs forZe",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3212,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+          "location": "US",
+          "modified_at": "2020-04-04T01:05:41Z",
+          "name": "FaZe",
+          "slug": "faze"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 60201,
+          "image_url": "https://cdn.pandascore.co/images/team/image/60201/FORZE.png",
+          "location": "RU",
+          "modified_at": "2020-04-04T01:05:46Z",
+          "name": "forZe",
+          "slug": "forze"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-04T12:25:00Z",
+    "rescheduled": false,
+    "results": [
+      {
+        "score": 0,
+        "team_id": 3212
+      },
+      {
+        "score": 0,
+        "team_id": 60201
+      }
+    ],
+    "scheduled_at": "2020-04-04T12:25:00Z",
+    "serie": {
+      "begin_at": "2020-03-15T23:00:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "Pro League season 11 2020",
+      "id": 2528,
+      "league_id": 4158,
+      "modified_at": "2020-03-05T19:39:40Z",
+      "name": "Pro League",
+      "season": "11",
+      "slug": "cs-go-esl-pro-league-11-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2528,
+    "slug": "faze-vs-forze-2020-04-04",
+    "status": "not_started",
+    "tournament": {
+      "begin_at": "2020-03-24T23:00:00Z",
+      "end_at": null,
+      "id": 3802,
+      "league_id": 4158,
+      "live_supported": true,
+      "modified_at": "2020-04-04T01:06:09Z",
+      "name": "Play-in",
+      "prizepool": null,
+      "serie_id": 2528,
+      "slug": "cs-go-esl-pro-league-11-2020-play-in",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 3802,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  },
+  {
+    "begin_at": "2020-04-04T16:00:00Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17133,
+        "length": null,
+        "match_id": 557708,
+        "position": 1,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17134,
+        "length": null,
+        "match_id": 557708,
+        "position": 2,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17135,
+        "length": null,
+        "match_id": 557708,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 557708,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "live": {
+      "opens_at": "2020-04-04T15:45:00Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/557708"
+    },
+    "live_url": null,
+    "match_type": "best_of",
+    "modified_at": "2020-04-04T01:06:42Z",
+    "name": " fnatic vs NiP",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3217,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3217/220px_fnaticlogo_square.png",
+          "location": "GB",
+          "modified_at": "2020-04-04T01:05:52Z",
+          "name": "fnatic",
+          "slug": "fnatic-cs-go"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3218,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3218/NINJAS_IN_PYJAMAS.png",
+          "location": "SE",
+          "modified_at": "2020-04-04T01:05:58Z",
+          "name": "NiP",
+          "slug": "nip"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-04T16:00:00Z",
+    "rescheduled": false,
+    "results": [
+      {
+        "score": 0,
+        "team_id": 3217
+      },
+      {
+        "score": 0,
+        "team_id": 3218
+      }
+    ],
+    "scheduled_at": "2020-04-04T16:00:00Z",
+    "serie": {
+      "begin_at": "2020-03-15T23:00:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "Pro League season 11 2020",
+      "id": 2528,
+      "league_id": 4158,
+      "modified_at": "2020-03-05T19:39:40Z",
+      "name": "Pro League",
+      "season": "11",
+      "slug": "cs-go-esl-pro-league-11-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2528,
+    "slug": "fnatic-vs-nip-2020-04-04",
+    "status": "not_started",
+    "tournament": {
+      "begin_at": "2020-03-24T23:00:00Z",
+      "end_at": null,
+      "id": 3802,
+      "league_id": 4158,
+      "live_supported": true,
+      "modified_at": "2020-04-04T01:06:09Z",
+      "name": "Play-in",
+      "prizepool": null,
+      "serie_id": 2528,
+      "slug": "cs-go-esl-pro-league-11-2020-play-in",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 3802,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  },
+  {
+    "begin_at": "2020-04-04T20:00:00Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16097,
+        "length": null,
+        "match_id": 556659,
+        "position": 1,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16098,
+        "length": null,
+        "match_id": 556659,
+        "position": 2,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 16099,
+        "length": null,
+        "match_id": 556659,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 556659,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "live": {
+      "opens_at": "2020-04-04T19:45:00Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/556659"
+    },
+    "live_url": null,
+    "match_type": "best_of",
+    "modified_at": "2020-04-04T01:06:50Z",
+    "name": " Vitality vs OG",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3455,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3455/VITALITY.png",
+          "location": "FR",
+          "modified_at": "2020-04-04T01:06:03Z",
+          "name": "Vitality",
+          "slug": "vitality-cs-go"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126584,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126584/600px_og_rb_logo.png",
+          "location": null,
+          "modified_at": "2020-04-04T01:06:09Z",
+          "name": "OG",
+          "slug": "og-cs-go"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-04T20:00:00Z",
+    "rescheduled": false,
+    "results": [
+      {
+        "score": 0,
+        "team_id": 3455
+      },
+      {
+        "score": 0,
+        "team_id": 126584
+      }
+    ],
+    "scheduled_at": "2020-04-04T20:00:00Z",
+    "serie": {
+      "begin_at": "2020-03-15T23:00:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "Pro League season 11 2020",
+      "id": 2528,
+      "league_id": 4158,
+      "modified_at": "2020-03-05T19:39:40Z",
+      "name": "Pro League",
+      "season": "11",
+      "slug": "cs-go-esl-pro-league-11-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2528,
+    "slug": "vitality-vs-og-2020-04-04",
+    "status": "not_started",
+    "tournament": {
+      "begin_at": "2020-03-24T23:00:00Z",
+      "end_at": null,
+      "id": 3802,
+      "league_id": 4158,
+      "live_supported": true,
+      "modified_at": "2020-04-04T01:06:09Z",
+      "name": "Play-in",
+      "prizepool": null,
+      "serie_id": 2528,
+      "slug": "cs-go-esl-pro-league-11-2020-play-in",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 3802,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  }
+]
