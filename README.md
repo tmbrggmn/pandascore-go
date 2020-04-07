@@ -17,7 +17,9 @@ has a couple of open issues (see below).
 
 ### Installation
 
-TODO
+```
+go get github.com/tmbrggmn/pandascore-go
+```
 
 ### Basic usage
 
