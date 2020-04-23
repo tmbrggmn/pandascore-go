@@ -43,15 +43,31 @@ func TestRequest_GetAll(t *testing.T) {
 		File("testdata/csgo-series-running.json").
 		SetHeader("X-Page", "1").
 		SetHeader("X-Per-Page", "20").
-		SetHeader("X-Total", "40")
+		SetHeader("X-Total", "65")
 
 	gock.New("https://api.pandascore.co/csgo/series/running").
-		MatchParam("page", "2").
+		MatchParam("page[number]", "2").
 		Reply(http.StatusOK).
 		File("testdata/csgo-series-running2.json").
 		SetHeader("X-Page", "2").
 		SetHeader("X-Per-Page", "20").
-		SetHeader("X-Total", "40")
+		SetHeader("X-Total", "65")
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		MatchParam("page[number]", "3").
+		Reply(http.StatusOK).
+		File("testdata/csgo-series-running2.json").
+		SetHeader("X-Page", "3").
+		SetHeader("X-Per-Page", "20").
+		SetHeader("X-Total", "65")
+
+	gock.New("https://api.pandascore.co/csgo/series/running").
+		MatchParam("page[number]", "4").
+		Reply(http.StatusOK).
+		File("testdata/csgo-series-running2.json").
+		SetHeader("X-Page", "4").
+		SetHeader("X-Per-Page", "20").
+		SetHeader("X-Total", "65")
 
 	seriesPtr := new([]Series)
 	response, err := New().
@@ -63,10 +79,10 @@ func TestRequest_GetAll(t *testing.T) {
 
 	assert.Nil(t, err)
 	assert.NotNil(t, series)
-	assert.Len(t, series, 4)
+	assert.Len(t, series, 8)
 	assert.Equal(t, []int{2522, 2528, 2523, 2529}, []int{series[0].ID, series[1].ID, series[2].ID, series[3].ID})
 	assert.NotNil(t, response)
-	assert.Equal(t, Response{CurrentPage: 2, ResultsPerPage: 20, TotalResults: 40}, response)
+	assert.Equal(t, Response{CurrentPage: 4, ResultsPerPage: 20, TotalResults: 65}, response)
 	assert.False(t, response.HasMore())
 }
 
@@ -172,6 +188,46 @@ func TestRequest_Get_Sort(t *testing.T) {
 		Request(CSGO, "leagues").
 		Sort("name", Ascending).
 		Sort("modified_at", Descending).
+		Get(leagues)
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Get_Page(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("page[number]", "2").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	_, err := New().
+		Request(CSGO, "leagues").
+		Page(2).
+		Get(leagues)
+
+	assert.Nil(t, err)
+	assert.NotNil(t, leagues)
+	assert.Len(t, *leagues, 1)
+}
+
+func TestRequest_Get_PageSize(t *testing.T) {
+	defer gock.Off()
+	defer assert.True(t, gock.IsDone())
+
+	gock.New("https://api.pandascore.co/csgo/leagues").
+		MatchParam("page[size]", "69").
+		Reply(http.StatusOK).
+		File("testdata/csgo-leagues-esl.json")
+
+	leagues := new([]League)
+	_, err := New().
+		Request(CSGO, "leagues").
+		PageSize(69).
 		Get(leagues)
 
 	assert.Nil(t, err)

@@ -123,6 +123,7 @@ func setQueryParameters(request *Request, query url.Values) string {
 	addQueryParameterFromMap("search", request.search, query)
 	addSortingQueryParameter(request.sort, query)
 	addPagingQueryParameter(request.page, query)
+	addPageSizeQueryParameter(request.pageSize, query)
 	return query.Encode()
 }
 
@@ -142,7 +143,13 @@ func addSortingQueryParameter(sorting []string, query url.Values) {
 
 func addPagingQueryParameter(page int, query url.Values) {
 	if page > 1 {
-		query.Add("page", strconv.Itoa(page))
+		query.Add("page[number]", strconv.Itoa(page))
+	}
+}
+
+func addPageSizeQueryParameter(pageSize int, query url.Values) {
+	if pageSize > 0 {
+		query.Add("page[size]", strconv.Itoa(pageSize))
 	}
 }
 

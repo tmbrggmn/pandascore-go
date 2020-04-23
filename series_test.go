@@ -37,7 +37,7 @@ func TestClient_GetAllRunningSeries_withPaging(t *testing.T) {
 		File("testdata/csgo-series-running.json")
 
 	gock.New("https://api.pandascore.co/csgo/series/running").
-		MatchParam("page", "2").
+		MatchParam("page[number]", "2").
 		Reply(http.StatusOK).
 		AddHeader("X-Page", "2").
 		AddHeader("X-Per-Page", "2").

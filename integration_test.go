@@ -42,3 +42,35 @@ func outputLeaguesAsTable(leagues []League) {
 	}
 	table.Render()
 }
+
+func TestIntegration_getAllCSGOUpcomingMatches(t *testing.T) {
+	loadEnvironmentVariables()
+
+	matches, err := New().GetAllUpcomingMatches(CSGO)
+
+	assert.Nil(t, err)
+	assert.GreaterOrEqual(t, len(matches), 101)
+	assert.NotEmpty(t, matches[0].ID)
+	assert.NotEmpty(t, matches[0].Name)
+	assert.NotEmpty(t, matches[0].Modified)
+	assert.NotNil(t, matches[0].Series)
+	assert.NotNil(t, matches[0].League)
+
+	outputMatchesAsTable(matches)
+}
+
+func outputMatchesAsTable(matches []Match) {
+	table := tablewriter.NewWriter(os.Stdout)
+	table.SetHeader([]string{"#", "ID", "Name", "Modified", "League", "Series"})
+	for index, match := range matches {
+		table.Append([]string{
+			strconv.Itoa(index + 1),
+			strconv.Itoa(match.ID),
+			match.Name,
+			match.Modified.String(),
+			match.League.Name,
+			match.Series.FullName,
+		})
+	}
+	table.Render()
+}

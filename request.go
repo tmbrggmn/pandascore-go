@@ -23,13 +23,14 @@ func (o Sorting) forField(field string) string {
 // PandaScore API request with it's attributes
 // TODO: add support for range
 type Request struct {
-	client *Client
-	game   Game
-	path   string
-	filter map[string]string
-	search map[string]string
-	sort   []string
-	page   int
+	client   *Client
+	game     Game
+	path     string
+	filter   map[string]string
+	search   map[string]string
+	sort     []string
+	page     int
+	pageSize int
 }
 
 // Adds a filter parameter to the request, where the given field must match the given value.
@@ -79,6 +80,17 @@ func (r *Request) Page(page int) *Request {
 		r.page = page
 	} else {
 		r.page = 1
+	}
+	return r
+}
+
+// Set the given page size for the request. Page size must be larger than 0 and less than, or equal to, 100. The default
+// page size is 50 if the given size is invalid.
+func (r *Request) PageSize(size int) *Request {
+	if size > 0 && size <= 100 {
+		r.pageSize = size
+	} else {
+		r.pageSize = 50
 	}
 	return r
 }

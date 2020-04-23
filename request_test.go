@@ -39,3 +39,11 @@ func TestRequest_Page(t *testing.T) {
 	request.Page(-1)
 	assert.Equal(t, 1, request.page, "Expected page to be 1 after it is set to a negative value")
 }
+
+func TestRequest_PageSize(t *testing.T) {
+	request := new(Request).PageSize(75)
+	assert.Equal(t, 75, request.pageSize, "Expected page to be 75 after it is set to 75")
+
+	request.PageSize(-1)
+	assert.Equal(t, 50, request.pageSize, "Expected page size to be 50 after it is set to a negative value")
+}

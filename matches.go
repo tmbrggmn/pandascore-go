@@ -5,12 +5,19 @@ import (
 	"time"
 )
 
-// Returns all upcoming matched for the given series ID.
-func (c *Client) GetAllUpcomingMatches(game Game, series Series) ([]Match, error) {
+// Returns all upcoming matches for the given game & series ID.
+func (c *Client) GetAllUpcomingMatchesForSeries(game Game, seriesID int) ([]Match, error) {
 	matches := new([]Match)
 	_, err := c.Request(game, "matches/upcoming").
-		Filter("serie_id", strconv.Itoa(series.ID)).
+		Filter("serie_id", strconv.Itoa(seriesID)).
 		Get(matches)
+	return *matches, err
+}
+
+// Returns all upcoming matches for the given game.
+func (c *Client) GetAllUpcomingMatches(game Game) ([]Match, error) {
+	matches := new([]Match)
+	_, err := c.Request(game, "matches/upcoming").PageSize(100).GetAll(matches)
 	return *matches, err
 }
 
@@ -24,6 +31,7 @@ type Match struct {
 	Modified  time.Time       `json:"modified_at"`
 	Opponents []MatchOpponent `json:"opponents"`
 	Series    Series          `json:"serie"`
+	League    League          `json:"league"`
 }
 
 // MatchOpponent represents an opponent as defined for a specific match. Whether the opponent is a team is defined on

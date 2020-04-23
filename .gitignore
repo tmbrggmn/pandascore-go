@@ -15,9 +15,7 @@
 # vendor/
 
 # GoLand
-
 .idea/**
 
 # Godotenv
-
 .env
