@@ -61,13 +61,14 @@ func TestIntegration_getAllCSGOUpcomingMatches(t *testing.T) {
 
 func outputMatchesAsTable(matches []Match) {
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"#", "ID", "Name", "Modified", "League", "Series"})
+	table.SetHeader([]string{"#", "ID", "Name", "Modified", "Video Game", "League", "Series"})
 	for index, match := range matches {
 		table.Append([]string{
 			strconv.Itoa(index + 1),
 			strconv.Itoa(match.ID),
 			match.Name,
 			match.Modified.String(),
+			match.Videogame.Name,
 			match.League.Name,
 			match.Series.FullName,
 		})

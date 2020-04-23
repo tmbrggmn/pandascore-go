@@ -43,4 +43,7 @@ func TestClient_GetAllUpcomingMatches(t *testing.T) {
 	assert.NotNil(t, result)
 	assert.IsType(t, []Match{}, result)
 	assert.Len(t, result, 3)
+	assert.NotNil(t, result[0].League)
+	assert.NotNil(t, result[0].Series)
+	assert.NotNil(t, result[0].Videogame)
 }

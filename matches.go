@@ -29,14 +29,14 @@ type Match struct {
 	Name      string          `json:"name"`
 	BeginsAt  time.Time       `json:"begin_at"`
 	Modified  time.Time       `json:"modified_at"`
+	Videogame Videogame       `json:"videogame"`
 	Opponents []MatchOpponent `json:"opponents"`
 	Series    Series          `json:"serie"`
 	League    League          `json:"league"`
 }
 
 // MatchOpponent represents an opponent as defined for a specific match. Whether the opponent is a team is defined on
-// this level, which I find really weird. As if there are opponents which can suddenly not be a team anymore if they're
-// not partaking in a match?
+// this level, which I find really weird.
 type MatchOpponent struct {
 	Type     string   `json:"type"`
 	Opponent Opponent `json:"opponent"`
@@ -46,4 +46,10 @@ type MatchOpponent struct {
 type Opponent struct {
 	Name     string `json:"name"`
 	Location string `json:"location"`
+}
+
+// Videogame represents the type of game that this match is being played in.
+type Videogame struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
 }
