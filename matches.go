@@ -21,6 +21,25 @@ func (c *Client) GetAllUpcomingMatches(game Game) ([]Match, error) {
 	return *matches, err
 }
 
+// Returns all upcoming matches for the given game starting from the given time up until the given time.
+//
+// Careful: the given times are always set to UTC (Zulu) so timezones are not take into account.
+func (c *Client) GetAllUpcomingMatchesBetween(game Game, beginning time.Time, until time.Time) ([]Match, error) {
+	matches := new([]Match)
+	_, err := c.Request(game, "matches/upcoming").
+		Range("begin_at", beginning.UTC().Format(time.RFC3339), until.UTC().Format(time.RFC3339)).
+		PageSize(100).
+		GetAll(matches)
+	return *matches, err
+}
+
+// Returns all running matches for the given game.
+func (c *Client) GetAllRunningMatches(game Game) ([]Match, error) {
+	matches := new([]Match)
+	_, err := c.Request(game, "matches/running").PageSize(100).GetAll(matches)
+	return *matches, err
+}
+
 // Match represents an instance of a single match between 2 opponents (teams or players).
 //
 // More information: https://developers.pandascore.co/doc/#section/Introduction/Events-hierarchy

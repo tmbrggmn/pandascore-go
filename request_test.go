@@ -24,6 +24,16 @@ func TestRequest_Search(t *testing.T) {
 	assert.Equal(t, map[string]string{"name": "ESL", "slug": "cs-go-esl"}, request.search)
 }
 
+func TestRequest_Range(t *testing.T) {
+	request := new(Request).
+		Range("begin_at", "2020-04-23", "2020-04-24").
+		Range("modified_at", "2020-04-20", "2020-04-21")
+
+	assert.NotNil(t, request)
+	assert.Len(t, request.ranges, 2)
+	assert.Equal(t, map[string]string{"begin_at": "2020-04-23,2020-04-24", "modified_at": "2020-04-20,2020-04-21"}, request.ranges)
+}
+
 func TestRequest_Sort(t *testing.T) {
 	request := new(Request).Sort("name", Descending).Sort("modified_at", Ascending)
 

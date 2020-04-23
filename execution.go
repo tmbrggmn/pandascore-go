@@ -120,6 +120,7 @@ func buildRequest(request *Request) (*http.Request, error) {
 func setQueryParameters(request *Request, query url.Values) string {
 	addQueryParameterFromMap("filter", request.filter, query)
 	addQueryParameterFromMap("search", request.search, query)
+	addQueryParameterFromMap("range", request.ranges, query)
 	addSortingQueryParameter(request.sort, query)
 	addPagingQueryParameter(request.page, query)
 	addPageSizeQueryParameter(request.pageSize, query)

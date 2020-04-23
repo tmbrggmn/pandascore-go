@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"testing"
+	"time"
 
 	"github.com/joho/godotenv"
 	"github.com/olekukonko/tablewriter"
@@ -59,14 +60,48 @@ func TestIntegration_getAllCSGOUpcomingMatches(t *testing.T) {
 	outputMatchesAsTable(matches)
 }
 
+func TestIntegration_getAllCSGOUpcomingMatchesBetween(t *testing.T) {
+	loadEnvironmentVariables()
+
+	matches, err := New().GetAllUpcomingMatchesBetween(CSGO, time.Now(), time.Now().Add(time.Hour*24))
+
+	assert.Nil(t, err)
+	assert.GreaterOrEqual(t, len(matches), 10)
+	assert.NotEmpty(t, matches[0].ID)
+	assert.NotEmpty(t, matches[0].Name)
+	assert.NotEmpty(t, matches[0].Modified)
+	assert.NotNil(t, matches[0].Series)
+	assert.NotNil(t, matches[0].League)
+
+	outputMatchesAsTable(matches)
+}
+
+func TestIntegration_getAllCSGORunningMatches(t *testing.T) {
+	loadEnvironmentVariables()
+
+	matches, err := New().GetAllRunningMatches(CSGO)
+
+	assert.Nil(t, err)
+	assert.GreaterOrEqual(t, len(matches), 2)
+	assert.NotEmpty(t, matches[0].ID)
+	assert.NotEmpty(t, matches[0].Name)
+	assert.NotEmpty(t, matches[0].Modified)
+	assert.NotNil(t, matches[0].Series)
+	assert.NotNil(t, matches[0].League)
+	assert.NotNil(t, matches[0].Videogame)
+
+	outputMatchesAsTable(matches)
+}
+
 func outputMatchesAsTable(matches []Match) {
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"#", "ID", "Name", "Modified", "Video Game", "League", "Series"})
+	table.SetHeader([]string{"#", "ID", "Name", "Starts at", "Modified", "Video Game", "League", "Series"})
 	for index, match := range matches {
 		table.Append([]string{
 			strconv.Itoa(index + 1),
 			strconv.Itoa(match.ID),
 			match.Name,
+			match.BeginsAt.String(),
 			match.Modified.String(),
 			match.Videogame.Name,
 			match.League.Name,

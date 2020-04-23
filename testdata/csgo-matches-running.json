@@ -1,0 +1,662 @@
+[
+  {
+    "begin_at": "2020-04-23T13:00:09Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": "2020-04-23T13:02:11Z",
+        "detailed_stats": true,
+        "end_at": "2020-04-23T14:01:01Z",
+        "finished": true,
+        "forfeit": false,
+        "id": 18412,
+        "length": 3530,
+        "match_id": 559177,
+        "position": 1,
+        "status": "finished",
+        "video_url": null,
+        "winner": {
+          "id": 3212,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2020-04-23T14:18:04Z",
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 18413,
+        "length": null,
+        "match_id": 559177,
+        "position": 2,
+        "status": "running",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 18414,
+        "length": null,
+        "match_id": 559177,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 559177,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "live": {
+      "opens_at": "2020-04-23T12:45:09Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/559177"
+    },
+    "live_embed_url": "https://player.twitch.tv/?channel=esl_csgo",
+    "live_url": "https://www.twitch.tv/esl_csgo",
+    "match_type": "best_of",
+    "modified_at": "2020-04-23T13:00:09Z",
+    "name": "FaZe vs North",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3212,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+          "location": "US",
+          "modified_at": "2020-04-22T12:37:21Z",
+          "name": "FaZe",
+          "slug": "faze"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3211,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3211/7533_30.png",
+          "location": "DK",
+          "modified_at": "2020-04-22T12:36:08Z",
+          "name": "North",
+          "slug": "north"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-23T13:00:00Z",
+    "rescheduled": false,
+    "results": [
+      {
+        "score": 1,
+        "team_id": 3212
+      },
+      {
+        "score": 0,
+        "team_id": 3211
+      }
+    ],
+    "scheduled_at": "2020-04-23T13:00:00Z",
+    "serie": {
+      "begin_at": "2020-04-22T13:00:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "One: Road to Rio - Europe 2020",
+      "id": 2626,
+      "league_id": 4158,
+      "modified_at": "2020-04-17T18:48:15Z",
+      "name": "One: Road to Rio - Europe",
+      "season": null,
+      "slug": "cs-go-esl-one-road-to-rio-europe-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2626,
+    "slug": "faze-vs-north-2020-04-23",
+    "status": "running",
+    "tournament": {
+      "begin_at": "2020-04-23T13:00:00Z",
+      "end_at": null,
+      "id": 4004,
+      "league_id": 4158,
+      "live_supported": true,
+      "modified_at": "2020-04-17T18:24:22Z",
+      "name": "Group b",
+      "prizepool": null,
+      "serie_id": 2626,
+      "slug": "cs-go-esl-one-road-to-rio-europe-2020-group-b",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 4004,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  },
+  {
+    "begin_at": "2020-04-23T13:02:53Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": "2020-04-23T13:03:06Z",
+        "detailed_stats": true,
+        "end_at": "2020-04-23T14:07:04Z",
+        "finished": true,
+        "forfeit": false,
+        "id": 18409,
+        "length": 3837,
+        "match_id": 559176,
+        "position": 1,
+        "status": "finished",
+        "video_url": null,
+        "winner": {
+          "id": 3215,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2020-04-23T14:21:29Z",
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 18410,
+        "length": null,
+        "match_id": 559176,
+        "position": 2,
+        "status": "running",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 18411,
+        "length": null,
+        "match_id": 559176,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 559176,
+    "league": {
+      "id": 4158,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+      "modified_at": "2019-02-25T17:17:32Z",
+      "name": "ESL",
+      "slug": "cs-go-esl",
+      "url": null
+    },
+    "league_id": 4158,
+    "live": {
+      "opens_at": "2020-04-23T12:47:53Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/559176"
+    },
+    "live_embed_url": "https://player.twitch.tv/?channel=esl_csgoc",
+    "live_url": "https://www.twitch.tv/esl_csgoc",
+    "match_type": "best_of",
+    "modified_at": "2020-04-23T14:32:25Z",
+    "name": "Dignitas vs Heretics",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 3215,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3215/600px_dignitas_2019.png",
+          "location": "US",
+          "modified_at": "2020-04-20T19:42:56Z",
+          "name": "Dignitas",
+          "slug": "dignitas-cs-go"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126147,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126147/_.png",
+          "location": "ES",
+          "modified_at": "2020-04-17T18:22:10Z",
+          "name": "Heretics",
+          "slug": "heretics"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-23T13:00:00Z",
+    "rescheduled": false,
+    "results": [
+      {
+        "score": 1,
+        "team_id": 3215
+      },
+      {
+        "score": 0,
+        "team_id": 126147
+      }
+    ],
+    "scheduled_at": "2020-04-23T13:00:00Z",
+    "serie": {
+      "begin_at": "2020-04-22T13:00:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "One: Road to Rio - Europe 2020",
+      "id": 2626,
+      "league_id": 4158,
+      "modified_at": "2020-04-17T18:48:15Z",
+      "name": "One: Road to Rio - Europe",
+      "season": null,
+      "slug": "cs-go-esl-one-road-to-rio-europe-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2626,
+    "slug": "dignitas-vs-heretics-2020-04-23",
+    "status": "running",
+    "tournament": {
+      "begin_at": "2020-04-22T13:00:00Z",
+      "end_at": null,
+      "id": 4003,
+      "league_id": 4158,
+      "live_supported": true,
+      "modified_at": "2020-04-17T18:22:10Z",
+      "name": "Group a",
+      "prizepool": null,
+      "serie_id": 2626,
+      "slug": "cs-go-esl-one-road-to-rio-europe-2020-group-a",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 4003,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  },
+  {
+    "begin_at": "2020-04-23T13:30:37Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": "2020-04-23T13:36:50Z",
+        "detailed_stats": true,
+        "end_at": "2020-04-23T14:31:34Z",
+        "finished": true,
+        "forfeit": false,
+        "id": 17716,
+        "length": 3284,
+        "match_id": 558412,
+        "position": 1,
+        "status": "finished",
+        "video_url": null,
+        "winner": {
+          "id": 126288,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2020-04-23T14:52:04Z",
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17717,
+        "length": null,
+        "match_id": 558412,
+        "position": 2,
+        "status": "running",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17718,
+        "length": null,
+        "match_id": 558412,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 558412,
+    "league": {
+      "id": 4244,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4244/LOOT.BET_Icon.png",
+      "modified_at": "2019-10-03T18:09:27Z",
+      "name": "LOOT.BET",
+      "slug": "cs-go-loot-bet",
+      "url": "https://loot.bet/cs"
+    },
+    "league_id": 4244,
+    "live": {
+      "opens_at": null,
+      "supported": false,
+      "url": null
+    },
+    "live_embed_url": "https://player.twitch.tv/?channel=uccleague",
+    "live_url": "https://www.twitch.tv/uccleague",
+    "match_type": "best_of",
+    "modified_at": "2020-04-23T13:30:37Z",
+    "name": "Round 5 match 2: SKADE vs Nordavind",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126288,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126288/skade.png",
+          "location": "BG",
+          "modified_at": "2020-04-12T18:34:46Z",
+          "name": "SKADE",
+          "slug": "skade"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126287,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126287/nordavind_logo.png",
+          "location": "NO",
+          "modified_at": "2020-04-20T19:47:51Z",
+          "name": "Nordavind",
+          "slug": "nordavind"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-23T12:55:00Z",
+    "rescheduled": true,
+    "results": [
+      {
+        "score": 1,
+        "team_id": 126288
+      },
+      {
+        "score": 0,
+        "team_id": 126287
+      }
+    ],
+    "scheduled_at": "2020-04-23T13:30:00Z",
+    "serie": {
+      "begin_at": "2020-04-05T09:55:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "Season 6 2020",
+      "id": 2583,
+      "league_id": 4244,
+      "modified_at": "2020-04-04T18:12:19Z",
+      "name": "",
+      "season": "6",
+      "slug": "cs-go-loot-bet-6-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2583,
+    "slug": "2020-04-23-df19118c-4412-480a-9302-9a502c0d1818",
+    "status": "running",
+    "tournament": {
+      "begin_at": "2020-04-05T09:55:00Z",
+      "end_at": null,
+      "id": 3920,
+      "league_id": 4244,
+      "live_supported": false,
+      "modified_at": "2020-04-15T10:51:11Z",
+      "name": "Group stage",
+      "prizepool": null,
+      "serie_id": 2583,
+      "slug": "cs-go-loot-bet-6-2020-group-stage",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 3920,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  },
+  {
+    "begin_at": "2020-04-23T13:30:37Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": "2020-04-23T13:36:50Z",
+        "detailed_stats": true,
+        "end_at": "2020-04-23T14:31:34Z",
+        "finished": true,
+        "forfeit": false,
+        "id": 17716,
+        "length": 3284,
+        "match_id": 558412,
+        "position": 1,
+        "status": "finished",
+        "video_url": null,
+        "winner": {
+          "id": 126288,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2020-04-23T14:52:04Z",
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17717,
+        "length": null,
+        "match_id": 558412,
+        "position": 2,
+        "status": "running",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 17718,
+        "length": null,
+        "match_id": 558412,
+        "position": 3,
+        "status": "not_started",
+        "video_url": null,
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 558412,
+    "league": {
+      "id": 4244,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4244/LOOT.BET_Icon.png",
+      "modified_at": "2019-10-03T18:09:27Z",
+      "name": "LOOT.BET",
+      "slug": "cs-go-loot-bet",
+      "url": "https://loot.bet/cs"
+    },
+    "league_id": 4244,
+    "live": {
+      "opens_at": null,
+      "supported": false,
+      "url": null
+    },
+    "live_embed_url": "https://player.twitch.tv/?channel=uccleague",
+    "live_url": "https://www.twitch.tv/uccleague",
+    "match_type": "best_of",
+    "modified_at": "2020-04-23T13:30:37Z",
+    "name": "Round 5 match 2: SKADE vs Nordavind",
+    "number_of_games": 3,
+    "opponents": [
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126288,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126288/skade.png",
+          "location": "BG",
+          "modified_at": "2020-04-12T18:34:46Z",
+          "name": "SKADE",
+          "slug": "skade"
+        },
+        "type": "Team"
+      },
+      {
+        "opponent": {
+          "acronym": null,
+          "id": 126287,
+          "image_url": "https://cdn.pandascore.co/images/team/image/126287/nordavind_logo.png",
+          "location": "NO",
+          "modified_at": "2020-04-20T19:47:51Z",
+          "name": "Nordavind",
+          "slug": "nordavind"
+        },
+        "type": "Team"
+      }
+    ],
+    "original_scheduled_at": "2020-04-23T12:55:00Z",
+    "rescheduled": true,
+    "results": [
+      {
+        "score": 1,
+        "team_id": 126288
+      },
+      {
+        "score": 0,
+        "team_id": 126287
+      }
+    ],
+    "scheduled_at": "2020-04-23T13:30:00Z",
+    "serie": {
+      "begin_at": "2020-04-05T09:55:00Z",
+      "description": null,
+      "end_at": null,
+      "full_name": "Season 6 2020",
+      "id": 2583,
+      "league_id": 4244,
+      "modified_at": "2020-04-04T18:12:19Z",
+      "name": "",
+      "season": "6",
+      "slug": "cs-go-loot-bet-6-2020",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2020
+    },
+    "serie_id": 2583,
+    "slug": "2020-04-23-df19118c-4412-480a-9302-9a502c0d1818",
+    "status": "running",
+    "tournament": {
+      "begin_at": "2020-04-05T09:55:00Z",
+      "end_at": null,
+      "id": 3920,
+      "league_id": 4244,
+      "live_supported": false,
+      "modified_at": "2020-04-15T10:51:11Z",
+      "name": "Group stage",
+      "prizepool": null,
+      "serie_id": 2583,
+      "slug": "cs-go-loot-bet-6-2020-group-stage",
+      "winner_id": null,
+      "winner_type": null
+    },
+    "tournament_id": 3920,
+    "videogame": {
+      "id": 3,
+      "name": "CS:GO",
+      "slug": "cs-go"
+    },
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null
+  }
+]

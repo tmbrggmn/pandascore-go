@@ -21,13 +21,13 @@ func (o Sorting) forField(field string) string {
 }
 
 // PandaScore API request with it's attributes
-// TODO: add support for range
 type Request struct {
 	client   *Client
 	game     Game
 	path     string
 	filter   map[string]string
 	search   map[string]string
+	ranges   map[string]string
 	sort     []string
 	page     int
 	pageSize int
@@ -42,6 +42,20 @@ func (r *Request) Filter(field string, value ...string) *Request {
 	}
 	if len(field) > 0 && len(value) > 0 {
 		r.filter[field] = strings.Join(value, ",")
+	}
+	return r
+}
+
+// Adds a range parameter to the request, typically dates, where the given field must have a value between the given
+// bounds.
+//
+// More information: https://developers.pandascore.co/doc/#section/Introduction/Range
+func (r *Request) Range(field string, lowerBound string, upperBound string) *Request {
+	if r.ranges == nil {
+		r.ranges = make(map[string]string)
+	}
+	if len(field) > 0 && len(lowerBound) > 0 && len(upperBound) > 0 {
+		r.ranges[field] = lowerBound + "," + upperBound
 	}
 	return r
 }
