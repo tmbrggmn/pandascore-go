@@ -7,29 +7,23 @@
 :warning: This is still a new project and does *not* completely abstract all PandaScore APIs or games (yet). It also
 has a couple of open issues (see below).
 
-### Points of attention/improvement
-
- * Getting **all pages** from the PandaScore API has been implemented with by unmarshalling the results from all
- requests into a single array of `map[string]interface{}` to avoid having to use `reflect` to merge structs (see 
- [execution.go](execution.go). Not sure if this is the best way to tackle this problem :man_shrugging: 
-
 ## Getting started
 
 ### Installation
 
-TODO
+```
+go get github.com/tmbrggmn/pandascore-go
+```
 
-### Basic usage
-
-TODO
-
-### Basic examples
+### Usage
 
 TODO
 
-## Usage
+## Points of attention/improvement
 
-TODO
+ * Getting **all pages** from the PandaScore API has been implemented with by unmarshalling the results from all
+ requests into a single array of `map[string]interface{}` to avoid having to use `reflect` to merge structs (see 
+ [execution.go](execution.go)). Not sure if this is the best way to tackle this problem :man_shrugging: 
 
 ## Integration tests
 
