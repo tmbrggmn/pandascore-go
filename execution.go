@@ -49,7 +49,6 @@ func (r *Request) GetAll(value interface{}) (Response, error) {
 	jsonResponseAsMap := new([]map[string]interface{})
 	response, err := r.Get(jsonResponseAsMap)
 	if err != nil {
-		log.Printf("unable to get first page of PandaScore request: %s", err)
 		return Response{}, err
 	}
 
@@ -157,7 +156,7 @@ func setAuthorizationHeader(request *Request, httpRequest *http.Request) {
 	if len(request.client.accessToken) > 0 {
 		httpRequest.Header.Add("Authorization", "Bearer "+request.client.accessToken)
 	} else {
-		log.Print("Warning: PandaScore access token hasn't been set, requests may fail")
+		log.Print("⚠ warning: PandaScore access token hasn't been set, requests may fail")
 	}
 }
 
