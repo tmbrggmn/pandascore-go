@@ -48,6 +48,7 @@ type Match struct {
 	Name      string          `json:"name"`
 	BeginsAt  time.Time       `json:"begin_at"`
 	Modified  time.Time       `json:"modified_at"`
+	LiveURL   string          `json:"live_url"`
 	Videogame Videogame       `json:"videogame"`
 	Opponents []MatchOpponent `json:"opponents"`
 	Series    Series          `json:"serie"`
@@ -65,6 +66,7 @@ type MatchOpponent struct {
 type Opponent struct {
 	Name     string `json:"name"`
 	Location string `json:"location"`
+	LogoURL  string `json:"image_url"`
 }
 
 // Videogame represents the type of game that this match is being played in.

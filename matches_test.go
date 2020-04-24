@@ -62,13 +62,14 @@ func TestClient_GetAllRunningMatches(t *testing.T) {
 	assert.NotNil(t, result)
 	assert.IsType(t, []Match{}, result)
 	assert.Len(t, result, 4)
+	assert.Equal(t, "https://www.twitch.tv/esl_csgo", result[0].LiveURL)
+	assert.Equal(t, "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png", result[0].Opponents[0].Opponent.LogoURL)
 }
 
 func TestClient_GetAllUpcomingMatchesBetween(t *testing.T) {
 	defer gock.Off()
 	defer assert.True(t, gock.IsDone())
 
-	gock.Observe(gock.DumpRequest)
 	now := time.Now()
 
 	gock.New("https://api.pandascore.co/csgo/matches/upcoming").
