@@ -21,18 +21,21 @@ func loadEnvironmentVariables() {
 	}
 }
 
-func TestIntegration_getAllCSGOLeagues(t *testing.T) {
+func TestIntegration_getAllLeagues(t *testing.T) {
 	loadEnvironmentVariables()
 
-	leagues, err := New().GetAllLeagues(CSGO)
+	games := []Game{CSGO, Dota2, LoL}
+	for _, game := range games {
+		leagues, err := New().GetAllLeagues(game)
 
-	assert.Nil(t, err)
-	assert.GreaterOrEqual(t, len(leagues), 50)
-	assert.NotEmpty(t, leagues[0].ID)
-	assert.NotEmpty(t, leagues[0].Name)
-	assert.NotEmpty(t, leagues[0].Modified)
+		assert.Nil(t, err)
+		assert.GreaterOrEqual(t, len(leagues), 50)
+		assert.NotEmpty(t, leagues[0].ID)
+		assert.NotEmpty(t, leagues[0].Name)
+		assert.NotEmpty(t, leagues[0].Modified)
 
-	outputLeaguesAsTable(leagues)
+		outputLeaguesAsTable(leagues)
+	}
 }
 
 func outputLeaguesAsTable(leagues []League) {
