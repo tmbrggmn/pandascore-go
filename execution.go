@@ -1,13 +1,14 @@
 package pandascore
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
+
+	jsoniter "github.com/json-iterator/go"
 )
 
 // Execute a single request against the PandaScore API to fetch the first page of results and marshal the response body
@@ -72,6 +73,7 @@ func (r *Request) GetAll(value interface{}) (Response, error) {
 	}
 
 	// Convert the map to JSON, then back to struct
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
 	mergedJsonMapAsJson, err := json.Marshal(jsonResponseAsMap)
 	if err != nil {
 		log.Printf("Failed to marshall merged response map to JSON: %s", err)
@@ -165,8 +167,11 @@ func unmarshallResponseBody(response *http.Response, value interface{}) error {
 	defer response.Body.Close()
 
 	// If the response is successful; unmarshal the body. If not; unmarshal the error message in the body.
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
 	if response.StatusCode >= 200 && response.StatusCode <= 299 {
+
 		return json.NewDecoder(response.Body).Decode(value)
+		//return json.NewDecoder(response.Body).Decode(value)
 	} else {
 		pandaScoreError := new(PandaScoreError)
 		err := json.NewDecoder(response.Body).Decode(pandaScoreError)
